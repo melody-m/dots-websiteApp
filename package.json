@@ -1,0 +1,17 @@
+{
+  "name": "today",
+  "version": "1.0.0",
+  "description": "Today apps",
+  "main": "app.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server"
+  },
+  "author": "Melody Mahoney",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
+
+

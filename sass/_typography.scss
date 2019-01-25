@@ -1,0 +1,26 @@
+body{
+
+    font-family:'Raleway', sans-serif;
+    color: $color-grey-light-1;
+}
+
+h1{
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 200;
+    display: inline-block;
+}
+
+.navigation__link {
+
+    font-size: 1.5rem;
+}
