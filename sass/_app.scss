@@ -1,62 +1,85 @@
-.container{
+.popup{
 
-    background-color: $color-grey-dark;
-    height: 65vh;
+    @include absCenter;
+    background-color: $color-yellow-light-1;
+    width: 75%;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    border-radius: .5rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.25);
+    transition: all .4s .15s; //last value > delay
 
-    &--pink{
-        border-bottom: 1px solid $color-primary;
-    }
+        &__title{        
+            padding: 1.8rem;
+            border-radius: .5rem;
+            text-align: center;
+    
+            &--A {
+                background-color: $color-primary;
+                color: $color-white;
+            }
+            &--B {
+                background-color: $color-secondary;
+                color: $color-white;    
+            }
 
-    &--blue{
-        border-bottom: 1px solid $color-secondary;
-    }
+            &--C {
+                background-color: $color-tertiary-dark;
+                color:  $color-white;
+            }
+        }
 
-    &--yellow{
-        border-bottom: 1px solid $color-tertiary;
-    }
+        &__add{
+            height: 8rem;
+            padding: 3rem 1.8rem;
+
+            &--A{
+                color: $color-primary;
+                background-color: $color-primary-light;
+            }
+
+            &--B{
+                color: $color-secondary;
+                background-color: $color-secondary-light;
+            }
+            &--C{
+                color: $color-tertiary-dark;
+                background-color: $color-tertiary-light-2;
+            }            
+        }
+
+        &__tasks{
+            position: relative;
+        }
+
+
+        &:target {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        &__close {
+            &:link,
+            &:visited {
+                color: currentColor;
+                position: absolute;
+                top: 2.5rem;
+                right: 2.5rem;
+                font-size: 3rem;
+                text-decoration: none;
+                display: inline-block;
+                transition: all .2s;
+                line-height: 1rem;
+            }
+    
+            &:hover {
+                color: $color-white;
+            }
+        }
+
 }
 
-.app{
-    &__toDoList{
-        margin:0 auto;
-        display: inline-block;
-    }
-    &__title{        
-        padding: 1.8rem;
-
-        &--pink{
-            background-color: $color-primary-dark;
-            border-top: 4px solid $color-primary;
-            border-bottom: 2px solid $color-primary;
-        }
-        &--blue{
-            background-color: $color-secondary-dark;
-            border-top: 4px solid $color-secondary;
-            border-bottom: 2px solid $color-secondary;
-        }
-        &--yellow{
-            background-color: $color-tertiary-dark;
-            border-top: 4px solid $color-tertiary;
-            border-bottom: 2px solid $color-tertiary;
-        }
-    }
-
-    &__add{
-        background-color: $color-grey-dark-3;
-        border-bottom: 1px solid $color-grey-dark-2;
-        height: 8rem;
-        padding: 3rem 1.8rem;
-        color: $color-grey-light-2;
-        position: relative;
-    }
-
-    &__info{
-        width: 20rem;
-        margin: 0 auto;
-        margin-top: 4rem;
-        text-align: center;
-    }
-}
 
 .add{
 
@@ -65,89 +88,257 @@
     }
     
     &__description{
-        margin-right: 1rem;
-        background-color: $color-grey-dark-2;
-        border: 1px solid $color-primary;
+        margin-right: 2rem;
+        padding: .5rem;
+        width: 30%;        
         padding: .3rem;
+        outline: none;
 
+        &--A {
+            background-color: $color-yellow-light-1;
+            border: 1px solid $color-primary;
+
+            &::placeholder{
+                font-size: 1.2rem;
+                color: $color-primary;
+            } 
+        }
+        &--B {
+            background-color: $color-yellow-light-1;
+            border: 1px solid $color-secondary;
+
+            &::placeholder{
+                font-size: 1.2rem;
+                color: $color-secondary;
+            } 
+        }
+        &--C {
+            width: 20%;
+            background-color: $color-yellow-light-1;
+            border: 1px solid $color-tertiary-dark;
+
+            &::placeholder{
+                font-size: 1.2rem;
+                color: $color-tertiary-dark;
+            } 
+        }
+    }
+
+    &__value,
+    &__type {
+        margin-right: 2rem;
+        padding: .3rem;
+        background-color: $color-yellow-light-1;
+        border: 1px solid $color-secondary;
+        color: $color-secondary;
         &::placeholder{
             font-size: 1.2rem;
-            color: $color-grey-light-2;
-            font-weight: 200;
-        }
- 
+            color: $color-secondary;
+        } 
     }
 
     &__prio{
-        margin: 0 1rem;
-        background-color: $color-grey-dark-2;
-        border: 1px solid $color-primary;
-        padding: .3rem;
         font-size: 1.2rem;
-        color: $color-grey-light-2;
+        color: $color-primary;
+        background-color: $color-yellow-light-1;
+        border: 1px solid $color-primary;
+        margin: 0 2rem;
+        padding: .3rem;
+        outline: none;
+    }
+
+    &__tips{
+        font-size: 1.2rem;
+        color: $color-tertiary-dark;
+        background-color: $color-yellow-light-1;
+        border: 1px solid $color-tertiary-dark;
+        margin: 0 2rem;
+        padding: .3rem;
+        outline: none;
     }
 }
 
-.info{
-    &__overview--pink{
-        border-bottom: 1px solid $color-primary;
-    }
-    &__tasks{
-        font-size: 1.3rem;
-        line-height: 2rem;
-        text-align: left;
-        margin-left: 3rem;
-        z-index: 10;
+.content{
+    &__overview {
+        &--A {color: $color-primary;}
+        &--B {color: $color-secondary;}
+        &--C {color: $color-tertiary-dark;}
+
     }
 
+    &__total{
+        text-align: center;
+        padding: 4rem;
+        line-height: 2rem;
+        min-height: 50vh;
+
+        &--A{
+            background-color: #fff8e1;
+        }
+        &--B{
+            background-color: #e1f5fe;
+        }
+        &--C{
+            background-color: $color-tertiary-light;
+        }
+        
+    }
+    &__sum{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        text-align: left;
+    }
+    &__list{
+        padding: 4rem;
+    }
 }
 
 .margin-bottom{
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
-.relative{
-    position: relative;
+.right{
+    float: right;
 }
 
-.animWindow{
-    width: 100%;
-    transition: all, .5s;
-}
-
-.fadeOut {
-    opacity: 0;
-    transition: opacity 0.2s ease-out;
-}
-
-.invisible{
-    display: none;
-}
-
-.visible{
+.item {
+    font-size: 1.4rem;
+    padding: .5rem;
     display: block;
+
+    &--A{
+        border-bottom: 1px solid $color-primary-medium;
+    }
+
+    &--B{
+        border-bottom: 1px solid $color-secondary-medium;
+    }
+
+    &--C{
+        border-bottom: 1px solid $color-tertiary-dark;
+    }
+
+
+    &__priority {
+        float: left;
+        font-size: 1.6rem;
+        margin-right: 1rem;
+        transition: transform 0.3s;
+    }
+    &__description {
+        float: left;
+    }
+    
+    &__delete {
+        float: left;
+    }
 }
 
-.app__info-extended{
-    width: 20rem;
-    margin: 4rem;
-    display: inline-block;
-    // transform: translateX(2rem);
-    transition: all, .5s;
+.budget{
+    &__income {
+        width: 100%;
+        float: left;
+        padding: 1rem 0;
+        border-top: 1px solid $color-grey-light-2;
+        border-bottom: 1px solid $color-grey-light-2;
+         
+
+        &--text{
+            float: left;
+        }
+
+        &--value{
+            padding: .3rem 1rem;
+            color: $color-white;
+            background-color: #1de9b6;
+        }
+    }
+
+    &__expenses{
+        width: 100%;
+        float: left;
+        padding: 1rem 0;
+        border-bottom: 1px solid $color-grey-light-2;
+  
+
+        &--value{
+            padding: .3rem;
+            padding-left: 1rem;
+            color: $color-white;
+            background-color: #fe6565;
+        }
+        &--text{
+            float: left;
+        }
+
+        &--percentage{
+            font-size: 1rem;
+            background-color: #fd4242;
+            padding: .3rem;
+            margin:0 .6rem;
+            border-radius: .2rem;
+            border: 1px solid $color-white;
+        }
+
+    }
+
+    &__header{
+        text-align: center;
+        padding: 2rem 0;
+        margin-bottom: 3rem;
+        // background-color: #e1f5fe;
+        // color: $color-secondary;
+        // border-top: 1px solid $color-secondary-medium;
+        // border-bottom: 1px solid $color-secondary-medium;
+    }
+
+    &__title{
+        margin-bottom: 1rem;
+    }
+
+
+    &__value{
+        display: inline-block;
+        padding: .3rem 1rem;
+        color: $color-white;
+        background-color: $color-secondary-medium;
+    }
+
 }
 
-.collapse{
-    display: block;
-    opacity: 0;
-    max-height: 0px;
-    overflow: hidden;
-    transition: all .3s;
+.tips{
+    &__result{
+        line-height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    &__text {
+        float: left;
+        width: 100%;
+        padding: 0 6rem;
+        margin: 3rem 0;
+    }
+
+    &__split {
+        margin: 3rem 0;
+        font-style: italic;
+        text-align: center;
+    }
+
+    &__number{
+        color: $color-tertiary-dark;
+        font-size: 2rem;
+    }
+
+    &__people {
+        width: 5rem;
+        font-size: 1.2rem;
+        color: $color-tertiary-dark;
+        background-color: $color-white;
+        border: 1px solid $color-tertiary-dark;
+        margin: 0 2rem;
+        padding: .3rem;
+        outline: none;
+    }
 }
 
-.show{
-    margin-top: 5rem;
-    opacity: 100;
-    display: inline-block;
-    max-height: 50rem;
-    transition: all .5s ease-in-out;
-  }

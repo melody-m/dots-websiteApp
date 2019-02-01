@@ -1,26 +1,45 @@
 body{
 
-    font-family:'Raleway', sans-serif;
-    color: $color-grey-light-1;
+    font-family: 'Open Sans', sans-serif;
+    color: $color-grey-medium;
 }
 
 h1{
-    font-size: 5rem;
-    font-weight: 200;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 6rem;
 }
 
 h2{
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
 }
 
 h3{
+    font-family: 'Merriweather', serif;
     font-size: 2rem;
-    font-weight: 200;
     display: inline-block;
 }
 
 .navigation__link {
 
     font-size: 1.5rem;
+}
+
+.circle__link{
+    font-family: 'Amaranth', sans-serif;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.task__sum{
+    font-family: 'Merriweather', serif;
+}
+
+.budget__header {
+    font-family: 'Merriweather', serif;
+}
+
+.tips__split{
+    font-family: 'Merriweather', serif;
+
 }

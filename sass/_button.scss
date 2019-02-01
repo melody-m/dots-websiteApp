@@ -1,0 +1,37 @@
+.container{
+    @include absCenter;
+    text-align: center;
+}
+
+
+.circle {
+
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    
+    &__toDo {
+        background-color: $color-primary;
+    }
+
+    &__budget{
+        background-color: $color-secondary;
+    }
+
+    &__tips{
+        background-color: $color-tertiary;
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__link{
+        color: $color-white;  
+        cursor: pointer;
+        z-index: 5;
+
+    }
+}

@@ -1,20 +1,26 @@
 // COLORS
 
-$color-primary:#ec407a;
-$color-primary-medium:#f48fb1;
-$color-primary-light:#f8bbd0;
-$color-primary-dark:#705467;
+$color-primary:#fb8c00;
+$color-primary-medium:#ffcc80;
+$color-primary-light:#ffe2a2;
 
-$color-secondary: #64b5f6;
-$color-secondary-light: #90caf9;
-$color-secondary-dark: #596579;
 
-$color-tertiary: #ffee58;
-$color-tertiary-light: #fff59d;
-$color-tertiary-dark: #706e61;
+$color-secondary: #42a5f5;
+$color-secondary-dark: #2196f3;
+$color-secondary-medium: #90caf9;
+$color-secondary-light: #bbdefb;
 
-$color-grey-dark:#2b2b3a;
+$color-tertiary: #ffd54f;
+$color-tertiary-light: #fff9c4;
+$color-tertiary-light-2: #fff283;
+$color-tertiary-medium: #ffe082;
+$color-tertiary-medium: #ffe082;
+$color-tertiary-dark: #ffc107;
+
+$color-grey-medium:#7a7a8b;
+
 $color-grey-dark-2:#424250;
+$color-grey-dark:#2b2b3a;
 $color-grey-dark-3:#343442;
 
 
@@ -24,13 +30,15 @@ $color-black:#000;
 $color-grey-light-1:#f7f7f7;
 $color-grey-light-2: #c9c9c9;
 
+$color-yellow-light-1: #fffde7;
+
 // FONTS
 
 $default-font-size:1.6rem;
 
 // GRID
 
-$grid-width: 114rem;
+$grid-width: 100rem;
 $gutter-vertical: 6rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
