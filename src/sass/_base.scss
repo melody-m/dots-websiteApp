@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+
+html {
+	//This defines what 1rem is
+	font-size: 62.5%; /* =10px on normal browser considering a default of 16px=100% on browsers*/
+}
+
+body {
+    box-sizing: border-box;
+
+    background-color: $color-grey-dark-2;
+}
+
+.clearfix{
+	&::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
