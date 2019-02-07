@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="70px" height="30px" viewBox="0 0 70 30" enable-background="new 0 0 70 30" xml:space="preserve">
+<radialGradient id="shadows_1_" cx="164.8154" cy="-6.7402" r="73.6383" gradientTransform="matrix(0.5229 -3.643967e-004 3.131831e-004 0.1092 -49.7029 22.7994)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#0033CC;stop-opacity:0.3"/>
+	<stop  offset="0.2048" style="stop-color:#0335CD;stop-opacity:0.2386"/>
+	<stop  offset="0.3395" style="stop-color:#0C3CCE;stop-opacity:0.1981"/>
+	<stop  offset="0.4541" style="stop-color:#1B48D1;stop-opacity:0.1638"/>
+	<stop  offset="0.5575" style="stop-color:#3059D6;stop-opacity:0.1327"/>
+	<stop  offset="0.6533" style="stop-color:#4B6FDB;stop-opacity:0.104"/>
+	<stop  offset="0.7435" style="stop-color:#6D8AE2;stop-opacity:0.077"/>
+	<stop  offset="0.8293" style="stop-color:#95AAEA;stop-opacity:0.0512"/>
+	<stop  offset="0.9118" style="stop-color:#C4D0F3;stop-opacity:0.0265"/>
+	<stop  offset="0.9888" style="stop-color:#F7F8FD;stop-opacity:0.0034"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path id="shadows_3_" fill="url(#shadows_1_)" d="M75.041,21.476c0.021,3.431-18.005,6.318-40.262,6.448
+	C12.522,28.055-5.536,25.381-5.557,21.95c-0.02-3.432,18.006-6.319,40.263-6.448C56.962,15.371,75.021,18.045,75.041,21.476z"/>
+<g>
+	<g id="coin_6_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M31.373,16.914c-0.124,1.307-3.35,2.066-7.203,1.697
+			c-3.854-0.368-6.877-1.727-6.752-3.031c0.125-1.305-0.999-3.467,7.285-2.756C32.62,13.504,31.497,15.609,31.373,16.914z"/>
+		
+			<ellipse transform="matrix(0.0952 -0.9955 0.9955 0.0952 8.0503 37.3747)" fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="24.585" cy="14.259" rx="2.374" ry="7.01"/>
+	</g>
+	<g id="coin_5_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M37.521,18.08c0.031,1.313-3.081,2.449-6.951,2.543
+			c-3.871,0.094-7.034-0.895-7.065-2.205c-0.032-1.311-1.405-3.323,6.905-3.604C38.354,14.545,37.49,16.77,37.521,18.08z"/>
+		
+			<ellipse transform="matrix(-0.0242 -0.9997 0.9997 -0.0242 14.9565 47.099)" fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="30.466" cy="16.25" rx="2.375" ry="7.01"/>
+	</g>
+	<g id="coin_4_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M58.521,17.08c0.031,1.313-3.08,2.449-6.949,2.543
+			c-3.871,0.094-7.034-0.895-7.065-2.205c-0.032-1.311-1.405-3.323,6.905-3.604C59.354,13.545,58.49,15.77,58.521,17.08z"/>
+		
+			<ellipse transform="matrix(-0.0243 -0.9997 0.9997 -0.0243 37.4684 67.0708)" fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="51.466" cy="15.25" rx="2.375" ry="7.009"/>
+	</g>
+	<g id="coin_3_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M45.589,15.411c0,1.36-3.157,2.464-7.054,2.464
+			c-3.897,0-7.054-1.104-7.054-2.464c0-1.359-1.333-3.48,7.035-3.563C46.514,11.768,45.589,14.052,45.589,15.411z"/>
+		<ellipse fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="38.535" cy="13.338" rx="7.054" ry="2.463"/>
+	</g>
+	<g id="coin">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M38.434,9.863c0.437,1.238-2.174,3.281-5.827,4.563
+			c-3.653,1.283-6.966,1.319-7.4,0.082c-0.435-1.238-2.362-2.729,5.456-5.56C38.135,6.243,38,8.626,38.434,9.863z"/>
+		
+			<ellipse transform="matrix(-0.3312 -0.9436 0.9436 -0.3312 31.7594 43.1082)" fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="31.157" cy="10.299" rx="2.375" ry="7.01"/>
+	</g>
+	<g id="coin_1_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M51.5,11.25c0,1.312-3.139,2.375-7.01,2.375
+			s-7.01-1.063-7.01-2.375s-1.324-3.356,6.99-3.438C52.418,7.735,51.5,9.938,51.5,11.25z"/>
+		<ellipse fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="44.49" cy="9.25" rx="7.01" ry="2.375"/>
+	</g>
+	<g id="coin_2_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M44.5,7.25c0,1.312-3.139,2.375-7.01,2.375
+			c-3.872,0-7.01-1.063-7.01-2.375s-1.324-3.356,6.991-3.438C45.418,3.735,44.5,5.938,44.5,7.25z"/>
+		<ellipse fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="37.49" cy="5.25" rx="7.01" ry="2.375"/>
+	</g>
+	<g id="coin_8_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M48.521,20.08c0.031,1.313-3.08,2.449-6.949,2.543
+			c-3.871,0.094-7.034-0.895-7.065-2.205c-0.032-1.311-1.405-3.322,6.905-3.604C49.354,16.545,48.49,18.77,48.521,20.08z"/>
+		
+			<ellipse transform="matrix(-0.0243 -0.9997 0.9997 -0.0243 24.2275 60.1458)" fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="41.466" cy="18.25" rx="2.375" ry="7.01"/>
+	</g>
+	<g id="coin_9_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M25.522,25.08c0.032,1.313-3.08,2.449-6.95,2.543
+			c-3.871,0.094-7.034-0.895-7.065-2.205c-0.032-1.311-1.405-3.322,6.905-3.604C26.354,21.545,25.49,23.77,25.522,25.08z"/>
+		
+			<ellipse transform="matrix(-0.0241 -0.9997 0.9997 -0.0241 -4.3328 42.2692)" fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="18.466" cy="23.25" rx="2.375" ry="7.01"/>
+	</g>
+	<g id="coin_10_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M20.471,21.064c0.399,1.25-2.268,3.218-5.956,4.394
+			c-3.688,1.178-7.001,1.118-7.4-0.132c-0.398-1.249-2.282-2.795,5.614-5.398C20.277,17.438,20.073,19.816,20.471,21.064z"/>
+		
+			<ellipse transform="matrix(-0.304 -0.9527 0.9527 -0.304 -3.0897 40.3247)" fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="13.186" cy="21.291" rx="2.374" ry="7.01"/>
+	</g>
+	<g id="coin_11_">
+		<path fill="#FBB03B" stroke="#F7931E" stroke-miterlimit="10" d="M64.521,24.08c0.031,1.313-3.08,2.449-6.949,2.543
+			c-3.871,0.094-7.034-0.895-7.065-2.205c-0.032-1.311-1.405-3.322,6.905-3.604C65.354,20.545,64.49,22.77,64.521,24.08z"/>
+		
+			<ellipse transform="matrix(-0.0241 -0.9997 0.9997 -0.0241 36.6044 80.2334)" fill="#FFCA55" stroke="#F7931E" stroke-miterlimit="10" cx="57.465" cy="22.25" rx="2.375" ry="7.009"/>
+	</g>
+</g>
+</svg>

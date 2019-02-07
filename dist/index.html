@@ -35,23 +35,61 @@
     <!-- Circle buttons -->
 
     <div class="container">
-        <div class="circle circle__toDo">
-                <div class="circle__text">
-                    <a href="#popup__toDo" class="circle__link" id="button-toDo">To Do!</a>
-                </div>        
+        <div class="circle circle__toDo"> 
+            
+            <a href="#popup__toDo" class="circle__link" id="button-toDo">
+
+                <div class="hoverBox clearfix">
+
+                    <div class="round round__toDo"></div>
+                    <div class="arm"></div>
+                    <div class="forearm"></div>
+                    <div class="weyeL"></div>
+                    <div class="weyeR"></div>
+
+                    <div class="geyeL"></div>
+                    <div class="geyeR"></div>
+
+                    <div class="backlist"></div>
+                    <div class="list"></div>
+                    <div class="listExt"></div>
+
+                </div>
+
+            </a>
+
+            <div class="circle__text">
+                <h3>To Do List</h3>
             </div>
-        
-            <div class="circle circle__budget">
-                <div class="circle__text">
-                    <a href="#popup__budget" class="circle__link" id="button-budget">Budget</a>
-                </div>        
-            </div>
-        
-            <div class="circle circle__tips">
-                <div class="circle__text">
-                    <a href="#popup__tips" class="circle__link" id="button-tips">Tips Calc</a>
-                </div>        
-            </div>
+
+        </div>
+
+        <div class="circle circle__budget">
+            
+            <a href="#popup__budget" class="circle__link" id="button-budget"></a>
+
+                <div class="hoverBox__blue clearfix">
+                
+                        <div class="round round__budget"></div>
+                        <div class="budget__pig"></div>
+                        <div class="budget__pile"></div>
+                        <div class="budget__coin"></div>
+                        <div class="budget__eyebrow"></div>
+                        <div class="budget__smile"></div>
+                    
+                    </div>
+
+                    
+            <div class="circle__text">
+                <h3>Budget</h3>
+            </div>        
+        </div>
+    
+        <div class="circle circle__tips">
+            <div class="circle__text">
+                <a href="#popup__tips" class="circle__link" id="button-tips">Tips Calc</a>
+            </div>        
+        </div>
     </div>
 
     <!-- Popup UI -->
@@ -62,7 +100,7 @@
             <h2>To Do List</h2>                
         </div>   
         
-        <a href="#" class="popup__close">&times;</a>
+        <a href="#" class="popup__close" id="close__toDo">&times;</a>
 
         <div class="popup__add popup__add--A">
             <div class="add__container">
@@ -143,7 +181,7 @@
                 <h2>Budget</h2>                
             </div>   
             
-            <a href="#" class="popup__close">&times;</a>
+            <a href="#" class="popup__close" id="close__budget">&times;</a>
 
             <div class="popup__add popup__add--B">
                 <div class="add__container">
@@ -241,7 +279,7 @@
             <h2>Tips Helper</h2>                
         </div>   
         
-        <a href="#" class="popup__close">&times;</a>
+        <a href="#" class="popup__close" id="close__tips">&times;</a>
 
         <div class="popup__add popup__add--C">
             <div class="add__container">

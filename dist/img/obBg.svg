@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<g id="FIX">
+	<radialGradient id="SVGID_1_" cx="150.876" cy="150.8521" r="146.6042" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.4947" style="stop-color:#FFE2A2"/>
+		<stop  offset="0.696" style="stop-color:#FFCD82"/>
+		<stop  offset="1" style="stop-color:#FFA74F"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_1_)" cx="150.876" cy="150.852" r="146.604"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="150.8765" y1="297.6045" x2="150.8765" y2="151">
+		<stop  offset="0" style="stop-color:#FFAC5C"/>
+		<stop  offset="0.6897" style="stop-color:#FFCD82"/>
+		<stop  offset="1" style="stop-color:#FFAC5C"/>
+	</linearGradient>
+	<path fill="url(#SVGID_2_)" d="M4.272,151c0,80,65.637,146.604,146.604,146.604C231.844,297.604,297.48,231,297.48,151
+		C276.688,151,19.9,151,4.272,151z"/>
+	<g>
+		<radialGradient id="SVGID_3_" cx="35.1982" cy="183.6738" r="30.3603" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_3_)" stroke="#A67C52" stroke-miterlimit="10" d="M63.628,151.5l-44.656,64.349
+			c-7.451-13.468-12.204-36.517-12.204-36.517l28.43-27.832H63.628z"/>
+		<radialGradient id="SVGID_4_" cx="91.5645" cy="218.3936" r="57.6198" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_4_)" stroke="#A67C52" stroke-width="0.7" stroke-miterlimit="10" d="M100.774,150.964L45.976,253.266
+			c0,0,20.561,21.483,47.836,32.669l43.341-135.083L100.774,150.964z"/>
+		<radialGradient id="SVGID_5_" cx="239.2969" cy="207.9717" r="48.0749" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_5_)" stroke="#A67C52" stroke-width="0.7" stroke-miterlimit="10" d="M202.423,150.964l40.343,114.128
+			c0,0,27.909-24.219,33.405-38.26l-37.935-75.98L202.423,150.964z"/>
+		<radialGradient id="SVGID_6_" cx="285.3516" cy="166.5771" r="14.1186" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_6_)" stroke="#A67C52" stroke-width="0.7" stroke-miterlimit="10" d="M273.046,150.964l21.053,31.338
+			c0,0,4.491-13.348,3.382-31.45L273.046,150.964z"/>
+		<radialGradient id="SVGID_7_" cx="173.5166" cy="224.5293" r="55.5657" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_7_)" stroke="#A67C52" stroke-miterlimit="10" d="M178.155,151.5l24.378,136.601
+			c-22.655,11.112-58.033,9.355-58.033,9.355V151.5H178.155z"/>
+	</g>
+	<g>
+		<radialGradient id="SVGID_8_" cx="20.1709" cy="165.8057" r="15.123" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_8_)" stroke="#A67C52" stroke-miterlimit="10" d="M36.069,151.5L6.917,180.111
+			C4.421,164.587,4.272,151.5,4.272,151.5l0,0H36.069z"/>
+		<radialGradient id="SVGID_9_" cx="59.873" cy="202.584" r="46.2734" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_9_)" stroke="#A67C52" stroke-miterlimit="10" d="M63.286,151.5l-44.314,64.46
+			c0,0,8.507,19.864,27.003,37.708L100.774,151.5H63.286z"/>
+		<radialGradient id="SVGID_10_" cx="210.126" cy="218.5928" r="54.0331" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_10_)" stroke="#A67C52" stroke-miterlimit="10" d="M177.486,149.5l25.392,138.186
+			c0,0,19.292-6.517,39.888-22.98L202.423,149.5H177.486z"/>
+		<radialGradient id="SVGID_11_" cx="266.168" cy="188.8418" r="33.342" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_11_)" stroke="#A67C52" stroke-miterlimit="10" d="M238.236,150.852l37.935,75.98
+			c0,0,12.942-20.586,17.928-44.53c-1.388-1.242-17.041-25.365-21.053-31.114L238.236,150.852z"/>
+		<radialGradient id="SVGID_12_" cx="118.9844" cy="223.7363" r="55.1618" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#FFCD82"/>
+			<stop  offset="0.7685" style="stop-color:#FFAC5C"/>
+			<stop  offset="1" style="stop-color:#FF9D4C"/>
+		</radialGradient>
+		<path fill="url(#SVGID_12_)" stroke="#A67C52" stroke-miterlimit="10" d="M144.5,151.188v146.269
+			c-27,0-51.031-11.521-51.031-11.521l37.479-135.919L144.5,151.188z"/>
+	</g>
+	
+		<radialGradient id="floor_shadow_1_" cx="123.2773" cy="208.8975" r="106.7052" gradientTransform="matrix(0.9999 0.011 -0.0077 0.7011 1.622 61.0834)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+		<stop  offset="1" style="stop-color:#C47C52;stop-opacity:0.5"/>
+	</radialGradient>
+	<path id="floor_shadow" fill="url(#floor_shadow_1_)" d="M4.272,152H297.48l0.176,11.813
+		c-101.259-8.48-191.725,7.889-209.259,21.746c-33.593,26.553-49.984,79.833,56.789,112.196C58.496,293.404,4.272,224,4.272,152z"/>
+	
+		<radialGradient id="light_1_" cx="221.2949" cy="233.2178" r="84.1397" gradientTransform="matrix(0.8221 -0.0655 0.0331 0.4231 1.5592 148.6454)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.3"/>
+		<stop  offset="0.8531" style="stop-color:#FFFFFF;stop-opacity:0.0441"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<path id="light" fill="url(#light_1_)" d="M285.654,204.629c0.803,8.92-29.901,60.463-89.257,79.438
+		c-45.197,14.45-71.419-56.292-72.223-65.212c-0.803-8.921,61.518-36.554,125.777-36.554
+		C258.751,182.302,284.851,195.708,285.654,204.629z"/>
+	
+		<radialGradient id="shadows_2_" cx="121.9116" cy="210.166" r="61.4451" gradientTransform="matrix(1.0934 0.0466 -0.0246 0.5512 -21.4607 87.2509)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#953813;stop-opacity:0.3"/>
+		<stop  offset="0.3164" style="stop-color:#963A15;stop-opacity:0.2051"/>
+		<stop  offset="0.4563" style="stop-color:#99401C;stop-opacity:0.1631"/>
+		<stop  offset="0.5614" style="stop-color:#9F4B29;stop-opacity:0.1316"/>
+		<stop  offset="0.6492" style="stop-color:#A75A3B;stop-opacity:0.1052"/>
+		<stop  offset="0.7262" style="stop-color:#B16D52;stop-opacity:0.0821"/>
+		<stop  offset="0.7955" style="stop-color:#BE866F;stop-opacity:0.0614"/>
+		<stop  offset="0.8591" style="stop-color:#CEA391;stop-opacity:0.0423"/>
+		<stop  offset="0.9184" style="stop-color:#E0C4B9;stop-opacity:0.0245"/>
+		<stop  offset="0.9719" style="stop-color:#F3E9E5;stop-opacity:0.0084"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<path id="shadows" fill="url(#shadows_2_)" d="M212.086,213.618c-0.38,11.642-40.307,19.788-89.183,18.197
+		c-48.875-1.591-88.189-12.316-87.81-23.958c0.379-11.641,40.308-19.788,89.182-18.198
+		C173.15,191.25,212.464,201.978,212.086,213.618z"/>
+	
+		<radialGradient id="shadows_3_" cx="142.5576" cy="231.0557" r="61.445" gradientTransform="matrix(1.0936 0.041 -0.0155 0.2718 -23.2576 146.8269)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#953813;stop-opacity:0.3"/>
+		<stop  offset="0.3164" style="stop-color:#963A15;stop-opacity:0.2051"/>
+		<stop  offset="0.4563" style="stop-color:#99401C;stop-opacity:0.1631"/>
+		<stop  offset="0.5614" style="stop-color:#9F4B29;stop-opacity:0.1316"/>
+		<stop  offset="0.6492" style="stop-color:#A75A3B;stop-opacity:0.1052"/>
+		<stop  offset="0.7262" style="stop-color:#B16D52;stop-opacity:0.0821"/>
+		<stop  offset="0.7955" style="stop-color:#BE866F;stop-opacity:0.0614"/>
+		<stop  offset="0.8591" style="stop-color:#CEA391;stop-opacity:0.0423"/>
+		<stop  offset="0.9184" style="stop-color:#E0C4B9;stop-opacity:0.0245"/>
+		<stop  offset="0.9719" style="stop-color:#F3E9E5;stop-opacity:0.0084"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<path id="shadows_1_" fill="url(#shadows_3_)" d="M234.499,219.612c-0.188,5.742-39.96,9.109-88.835,7.519
+		c-48.875-1.592-88.345-7.537-88.158-13.28s39.96-9.109,88.835-7.518C195.217,207.924,234.687,213.868,234.499,219.612z"/>
+	<path fill="#E23614" stroke="#F7931E" stroke-miterlimit="10" d="M150.876,212.903c-3.18-2.974-4.992,3.999-3.792,5.449
+		c1.199,1.45,7.561,2.349,7.561,2.349s9.202-2.459,7.946-4.357C161.336,214.447,154.056,215.877,150.876,212.903z"/>
+	
+		<radialGradient id="SVGID_13_" cx="166.2559" cy="220.1377" r="20.9792" fx="154.6609" fy="220.1535" gradientTransform="matrix(-0.9562 0.2928 -0.1615 -0.5273 360.7686 287.5406)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#F2F2F2"/>
+		<stop  offset="0.4419" style="stop-color:#E6E6E6"/>
+		<stop  offset="1" style="stop-color:#B3B3B3"/>
+	</radialGradient>
+	<path fill="url(#SVGID_13_)" stroke="#999999" stroke-miterlimit="10" d="M148.366,222.982c0,0,23.43,5.69,29.79,3.013
+		c6.358-2.678,1.398-14.585-16.568-14.894C157.039,211.021,149.036,221.645,148.366,222.982z"/>
+	<radialGradient id="SVGID_14_" cx="117.1328" cy="221.293" r="7.7037" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#F2F2F2"/>
+		<stop  offset="0.5369" style="stop-color:#E6E6E6"/>
+		<stop  offset="1" style="stop-color:#CCCCCC"/>
+	</radialGradient>
+	<path fill="url(#SVGID_14_)" stroke="#808080" stroke-miterlimit="10" d="M120.964,225.665c0,0-9.229-2.115-13.267-4.134
+		c-2.315-1.158,3.203-5.578,8.412-4.42c5.21,1.157,11.002,1.751,11.002,1.751L120.964,225.665z"/>
+	<path fill="#FF4516" stroke="#F7931E" stroke-miterlimit="10" d="M115.396,214.911c-3.179-2.974-4.992,3.999-3.793,5.45
+		c1.199,1.449,7.561,2.349,7.561,2.349s9.202-2.46,7.947-4.356C125.856,216.456,118.576,217.885,115.396,214.911z"/>
+	<radialGradient id="SVGID_15_" cx="147.2832" cy="120.7275" r="101.9783" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FB8C00"/>
+		<stop  offset="0.4501" style="stop-color:#FE770E"/>
+		<stop  offset="0.8128" style="stop-color:#FF6B16"/>
+		<stop  offset="1" style="stop-color:#FF4516"/>
+	</radialGradient>
+	<path fill="url(#SVGID_15_)" stroke="#F7931E" stroke-miterlimit="10" d="M206.885,146.835
+		c7.835,39.404-32.568,72.744-72.744,72.744s-81.412-36.04-59.355-69.62c24.769-37.71,19.18-75.868,59.355-75.868
+		S199.298,108.678,206.885,146.835z"/>
+	
+		<radialGradient id="SVGID_16_" cx="138.3076" cy="222.2529" r="20.1225" fx="131.3937" fy="222.1831" gradientTransform="matrix(-0.9955 0.0951 -0.0551 -0.5765 288.2286 337.2184)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#F2F2F2"/>
+		<stop  offset="0.5169" style="stop-color:#E6E6E6"/>
+		<stop  offset="1" style="stop-color:#B3B3B3"/>
+	</radialGradient>
+	<path fill="url(#SVGID_16_)" stroke="#808080" stroke-miterlimit="10" d="M117.573,224.99c0,0,23.43,5.69,29.79,3.014
+		c6.359-2.679,1.398-14.586-16.569-14.896C126.245,213.031,118.242,223.651,117.573,224.99z"/>
+</g>
+<circle fill="none" stroke="#EA6928" stroke-width="2" stroke-miterlimit="10" cx="150.874" cy="150.622" r="146.782"/>
+</svg>

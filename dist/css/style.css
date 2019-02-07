@@ -6,6 +6,11 @@
 .none {
   display: none; }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
 *,
 *::after,
 *::before {
@@ -89,7 +94,7 @@ h3 {
 
 .header {
   text-align: center;
-  margin-bottom: 10rem; }
+  margin-bottom: 12%; }
 
 .navigation {
   display: inline-block; }
@@ -122,30 +127,249 @@ h3 {
   transition: all .3s; }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 .circle {
-  width: 20rem;
-  height: 20rem;
-  margin: 2rem;
-  border-radius: 50%;
-  display: inline-block; }
-  .circle__toDo {
-    background-color: #fb8c00; }
-  .circle__budget {
-    background-color: #42a5f5; }
-  .circle__tips {
-    background-color: #ffd54f; }
+  display: inline-block;
+  width: 35rem;
+  height: 35rem;
+  position: relative; }
   .circle__text {
     text-align: center; }
   .circle__link {
     color: #fff;
     cursor: pointer;
     z-index: 5; }
+
+.hoverBox {
+  width: 30rem;
+  height: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .hoverBox:hover .listExt {
+    transform: translateY(35px); }
+  .hoverBox:hover .forearm {
+    animation-name: armLoop;
+    animation-duration: 2s; }
+  .hoverBox:hover .weyeL {
+    transform: scale(1.7); }
+  .hoverBox:hover .weyeR {
+    transform: scale(1.7); }
+  .hoverBox__blue:hover .budget__pig {
+    animation-name: pigLoop;
+    animation-duration: 2s;
+    animation-timing-function: ease; }
+  .hoverBox__blue:hover .budget__coin {
+    transform: translateY(6rem); }
+  .hoverBox__blue:hover .budget__eyebrow {
+    transform: translateY(-1rem); }
+  .hoverBox__blue:hover .budget__smile {
+    width: .5rem;
+    height: .5rem;
+    transform: translateX(2px); }
+
+.round {
+  width: 30rem;
+  height: 30rem;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .round__toDo {
+    background-image: url(../img/obBg.svg); }
+  .round__budget {
+    background-image: url(../img/bbBg.svg); }
+
+.arm {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  background-color: darkgray;
+  width: 3px;
+  height: 50px;
+  transform: rotate(-40deg); }
+
+.forearm {
+  position: absolute;
+  top: 59%;
+  left: 40%;
+  z-index: 10;
+  transform-origin: top left;
+  background-color: darkgray;
+  width: 50px;
+  height: 3px;
+  transition: all 2s; }
+
+.weyeL {
+  position: absolute;
+  top: 40%;
+  left: 50.5%;
+  z-index: 10;
+  background-color: white;
+  width: 6px;
+  height: 10px;
+  border-radius: 50%;
+  transition: all 1s; }
+
+.weyeR {
+  position: absolute;
+  top: 40%;
+  left: 54%;
+  z-index: 10;
+  background-color: white;
+  width: 6px;
+  height: 10px;
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 10; }
+
+.geyeL {
+  position: absolute;
+  top: 42%;
+  left: 51%;
+  z-index: 10;
+  background-color: grey;
+  width: 4px;
+  height: 5px;
+  border-radius: 50%;
+  z-index: 11; }
+
+.geyeR {
+  position: absolute;
+  top: 42%;
+  left: 54%;
+  z-index: 10;
+  background-color: grey;
+  width: 4px;
+  height: 5px;
+  border-radius: 50%;
+  z-index: 11; }
+
+.backlist {
+  background-image: url(../img/obBckList.svg);
+  background-size: cover;
+  background-position: center;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 46%; }
+
+.listExt {
+  background-image: url(../img/obListExt.svg);
+  background-size: cover;
+  background-position: center;
+  /* background-color:#ffe2a2; */
+  border-right: 1px solid #a67c52;
+  border-left: 1px solid #a67c52;
+  border-bottom: 1px solid #a67c52;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 51%;
+  left: 51%;
+  z-index: 2;
+  transition: all 2s; }
+
+.list {
+  background-image: url(../img/obList.svg);
+  background-size: cover;
+  background-position: top;
+  width: 60px;
+  height: 40px;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
+.budget__eyebrow {
+  position: absolute;
+  top: 35%;
+  left: 46.5%;
+  background-image: url(../img/bbeyebrow.svg);
+  background-size: cover;
+  background-position: top;
+  width: 3rem;
+  height: 1rem;
+  transition: all 1s;
+  transition-delay: .3s; }
+
+.budget__smile {
+  position: absolute;
+  top: 47%;
+  left: 49%;
+  background-color: #1b1464;
+  width: 1rem;
+  height: 2px;
+  border-radius: 50%;
+  transition: all 1s;
+  transition-delay: .3s; }
+
+.budget__pig {
+  position: absolute;
+  top: 43%;
+  left: 22%;
+  z-index: 10;
+  transform-origin: top right;
+  background-image: url(../img/bbpig.svg);
+  background-size: cover;
+  background-position: top;
+  width: 6rem;
+  height: 6rem;
+  transform: rotate(-15deg); }
+
+.budget__pile {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  z-index: 15;
+  background-image: url(../img/bbpile.svg);
+  background-size: cover;
+  background-position: top;
+  width: 7rem;
+  height: 3rem; }
+
+.budget__coin {
+  position: absolute;
+  top: 53%;
+  left: 29%;
+  background-image: url(../img/bbcoin.svg);
+  background-size: cover;
+  background-position: top;
+  width: 2rem;
+  height: 2rem;
+  transition: all .2s;
+  transition-delay: .3s; }
+
+@keyframes armLoop {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(15deg); }
+  50% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(15deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+@keyframes pigLoop {
+  0% {
+    transform: rotate(-15deg); }
+  25% {
+    transform: rotate(25deg); }
+  50% {
+    transform: rotate(-25deg); }
+  75% {
+    transform: rotate(15deg); }
+  100% {
+    transform: rotate(-15deg); } }
 
 .popup {
   position: absolute;
@@ -187,9 +411,6 @@ h3 {
       background-color: #fff283; }
   .popup__tasks {
     position: relative; }
-  .popup:target {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); }
   .popup__close:link, .popup__close:visited {
     color: currentColor;
     position: absolute;
@@ -390,3 +611,8 @@ h3 {
   margin: 0 2rem;
   padding: .3rem;
   outline: none; }
+
+.appear {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all .3s ease-in; }

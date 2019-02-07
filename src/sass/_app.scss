@@ -54,11 +54,11 @@
         }
 
 
-        &:target {
+        // &:target {
             
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-        }
+        //     opacity: 1;
+        //     transform: translate(-50%, -50%) scale(1);
+        // }
         
         &__close {
             &:link,
@@ -344,7 +344,13 @@
 }
 
 
+.appear {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
 
+        transition: all .3s ease-in;
+
+}
 
 
 

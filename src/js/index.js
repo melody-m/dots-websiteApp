@@ -14,25 +14,50 @@ import {taskUI} from './views/taskViews';
 
 function init(){
 
-    // document.getElementById('button-toDo').addEventListener('click', () => {
-    //     document.getElementById('popup__budget').classList.toggle('none');
-    //     document.getElementById('popup__tips').classList.toggle('none');
-    // });
+    const popDOM = {
+        toDo : document.getElementById('popup__toDo'),
+        budget: document.getElementById('popup__budget'),
+        tips : document.getElementById('popup__tips')
+    };
 
-    // document.getElementById('button-budget').addEventListener('click', () => {
-    //     document.getElementById('popup__toDo').classList.toggle('none');
-    //     document.getElementById('popup__tips').classList.toggle('none');
-    // });
+    //Popup to do tasks
+    document.getElementById('button-toDo').addEventListener('click', () => {
+        popDOM.toDo.classList.toggle('appear');
+        popDOM.budget.classList.toggle('none');
+        popDOM.tips.classList.toggle('none');
+    });
+    document.getElementById('close__toDo').addEventListener('click', () => {
+        popDOM.toDo.classList.toggle('appear');
+        popDOM.budget.classList.toggle('none');
+        popDOM.tips.classList.toggle('none');
+    });
 
-    // document.getElementById('button-tips').addEventListener('click', () => {
-    //     document.getElementById('popup__budget').classList.toggle('none');
-    //     document.getElementById('popup__toDo').classList.toggle('none');
-    // });
+    //Popup budget
+    document.getElementById('button-budget').addEventListener('click', () => {
+        popDOM.budget.classList.toggle('appear');
+        popDOM.toDo.classList.toggle('none');
+        popDOM.tips.classList.toggle('none');
+    });
+
+    document.getElementById('close__budget').addEventListener('click', () => {
+        popDOM.budget.classList.toggle('appear');
+        popDOM.toDo.classList.toggle('none');
+        popDOM.tips.classList.toggle('none');
+    });
+
+    //Popup tips
+    document.getElementById('button-tips').addEventListener('click', () => {
+        popDOM.tips.classList.toggle('appear');
+        popDOM.toDo.classList.toggle('none');
+        popDOM.budget.classList.toggle('none');
+    });
+    document.getElementById('close__tips').addEventListener('click', () => {
+        popDOM.tips.classList.toggle('appear');
+        popDOM.toDo.classList.toggle('none');
+        popDOM.budget.classList.toggle('none');
+    });
 
 }
-
-
-
 
 /************************************************************************************ */
 //BUDGET CONTROLLER
