@@ -5,60 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Today</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300i,400,400i|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     
 </head>
 <body>
 
     <div class="header">
+
+        <div class="header__logo"><img src="img/dots-logo.svg" alt="dots logo" class="logo"></div>
+
+        <div class="header__intro"><h3 class="intro">&mdash; Three dots to help you everyday ! &mdash;</h3>
+        </div>
+              
         
-        <h1>TodayApp</h1>
-
-        <div class="navigation navigation__pink">
-            <div class="navigation__line navigation__line--pink"></div>
-            <div class="navigation__link"><span id="pink_nav">To Do</span></div>
-        </div>
-
-        <div class="navigation navigation__blue">
-            <div class="navigation__line navigation__line--blue"></div>
-            <div class="navigation__link"><span id="blue_nav">Budget</span></div>
-        </div>
-
-        <div class="navigation navigation__yellow">
-            <div class="navigation__line navigation__line--yellow"></div>
-            <div class="navigation__link"><span id="yellow_nav">Tips</span></div>
-        </div>
-
     </div>
 
+    
     <!-- Circle buttons -->
 
     <div class="container">
+        
         <div class="circle circle__toDo"> 
             
             <a href="#popup__toDo" class="circle__link" id="button-toDo">
+                <div class="hoverBox hoverBox__org clearfix">
+                    <div class="round round__toDo"></div>                  
+                    <div class="todo__arm"></div>
+                    <div class="todo__eyebrow"></div>
+                    <div class="todo__eye todo__eye--L"></div>
+                    <div class="todo__eye todo__eye--R"></div>
 
-                <div class="hoverBox clearfix">
+                    <div class="todo__pupil todo__pupil--L"></div>
+                    <div class="todo__pupil todo__pupil--R"></div>
 
-                    <div class="round round__toDo"></div>
-                    <div class="arm"></div>
-                    <div class="forearm"></div>
-                    <div class="weyeL"></div>
-                    <div class="weyeR"></div>
-
-                    <div class="geyeL"></div>
-                    <div class="geyeR"></div>
-
-                    <div class="backlist"></div>
-                    <div class="list"></div>
-                    <div class="listExt"></div>
-
+                    <div class="todo__backlist"></div>
+                    <div class="todo__list"></div>
+                    <div class="todo__listExt"></div>
                 </div>
-
             </a>
 
-            <div class="circle__text">
+            <div class="circle__text appLabel appLabel__todo">
                 <h3>To Do List</h3>
             </div>
 
@@ -66,30 +53,44 @@
 
         <div class="circle circle__budget">
             
-            <a href="#popup__budget" class="circle__link" id="button-budget"></a>
+            <a href="#popup__budget" class="circle__link" id="button-budget">
 
-                <div class="hoverBox__blue clearfix">
-                
-                        <div class="round round__budget"></div>
-                        <div class="budget__pig"></div>
-                        <div class="budget__pile"></div>
-                        <div class="budget__coin"></div>
-                        <div class="budget__eyebrow"></div>
-                        <div class="budget__smile"></div>
-                    
-                    </div>
-
+                <div class="hoverBox hoverBox__blue clearfix">                
+                    <div class="round round__budget"></div>
+                    <div class="budget__pig"></div>
+                    <div class="budget__pile"></div>
+                    <div class="budget__coin"></div>
+                    <div class="budget__eyebrow"></div>
+                    <div class="budget__smile"></div>                    
+                </div>
+            </a>
                     
             <div class="circle__text">
-                <h3>Budget</h3>
+                <h3 class="appLabel appLabel__budget">Budget Helper</h3>
             </div>        
         </div>
     
         <div class="circle circle__tips">
+            <a href="#popup__tips" class="circle__link" id="button-tips">
+
+                <div class="hoverBox hoverBox__yellow clearfix">                
+                    <div class="round round__tips"></div>
+                    <div class="tips__hand"></div>
+                    <div class="tips__cog tips__cog--1"></div>
+                    <div class="tips__cog tips__cog--2"></div>
+                    <div class="tips__cog tips__cog--3"></div>
+                    <div class="tips__math tips__math--1"></div>
+                    <div class="tips__math tips__math--2"></div>
+                    <div class="tips__math tips__math--3"></div>
+                    <div class="tips__math tips__math--4"></div>
+                </div>
+            </a>
+                
             <div class="circle__text">
-                <a href="#popup__tips" class="circle__link" id="button-tips">Tips Calc</a>
-            </div>        
+                <h3 class="appLabel appLabel__tips">Tips calculator</h3>
+            </div> 
         </div>
+
     </div>
 
     <!-- Popup UI -->

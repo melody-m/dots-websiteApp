@@ -15,7 +15,8 @@ html {
 body {
     box-sizing: border-box;
 
-    background-color: $color-grey-dark-2;
+    background-image: radial-gradient($color-grey-dark-2, $color-grey-dark 70%, $color-grey-dark-4);
+    //background-color: $color-grey-dark-2;
 }
 
 .clearfix{

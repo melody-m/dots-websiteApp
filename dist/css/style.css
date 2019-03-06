@@ -24,7 +24,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #424250; }
+  background-image: radial-gradient(#424250, #2b2b3a 70%, #1d1d28); }
 
 .clearfix::after {
   content: "";
@@ -36,8 +36,11 @@ body {
   color: #7a7a8b; }
 
 h1 {
-  font-family: 'Amaranth', sans-serif;
-  font-size: 6rem; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+  color: #c9c9c9; }
 
 h2 {
   font-family: 'Merriweather', serif;
@@ -92,39 +95,26 @@ h3 {
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
-.header {
+.header__logo {
+  margin-bottom: 3rem; }
+
+.header__intro {
   text-align: center;
-  margin-bottom: 12%; }
+  margin-bottom: 6rem; }
 
-.navigation {
-  display: inline-block; }
-  .navigation__line {
-    width: 10rem;
-    height: .5rem; }
-    .navigation__line--pink {
-      background-color: #fb8c00; }
-    .navigation__line--blue {
-      background-color: #42a5f5; }
-    .navigation__line--yellow {
-      background-color: #ffd54f; }
-  .navigation__pink:hover #pink_nav {
-    opacity: 100; }
-  .navigation__blue:hover #blue_nav {
-    opacity: 100; }
-  .navigation__yellow:hover #yellow_nav {
-    opacity: 100; }
+.logo {
+  width: 10rem;
+  height: 10rem;
+  margin: 2.5rem;
+  opacity: .75; }
 
-#pink_nav, #pink_nav:link, #pink_nav:visited {
-  opacity: 0;
-  transition: all .3s; }
-
-#blue_nav, #blue_nav:link, #blue_nav:visited {
-  opacity: 0;
-  transition: all .3s; }
-
-#yellow_nav, #yellow_nav:link, #yellow_nav:visited {
-  opacity: 0;
-  transition: all .3s; }
+.intro {
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+  color: white;
+  opacity: .75;
+  margin-bottom: 5rem; }
 
 .container {
   text-align: center;
@@ -140,42 +130,19 @@ h3 {
   .circle__link {
     color: #fff;
     cursor: pointer;
-    z-index: 5; }
-
-.hoverBox {
-  width: 30rem;
-  height: 30rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-  .hoverBox:hover .listExt {
-    transform: translateY(35px); }
-  .hoverBox:hover .forearm {
-    animation-name: armLoop;
-    animation-duration: 2s; }
-  .hoverBox:hover .weyeL {
-    transform: scale(1.7); }
-  .hoverBox:hover .weyeR {
-    transform: scale(1.7); }
-  .hoverBox__blue:hover .budget__pig {
-    animation-name: pigLoop;
-    animation-duration: 2s;
-    animation-timing-function: ease; }
-  .hoverBox__blue:hover .budget__coin {
-    transform: translateY(6rem); }
-  .hoverBox__blue:hover .budget__eyebrow {
-    transform: translateY(-1rem); }
-  .hoverBox__blue:hover .budget__smile {
-    width: .5rem;
-    height: .5rem;
-    transform: translateX(2px); }
+    z-index: 25; }
+  .circle:hover .appLabel {
+    transform: translateY(-2rem);
+    opacity: 1; }
 
 .round {
   width: 30rem;
   height: 30rem;
   background-size: cover;
   background-position: center;
+  border-radius: 50%;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0.2rem 1.5rem 2rem rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -184,74 +151,76 @@ h3 {
     background-image: url(../img/obBg.svg); }
   .round__budget {
     background-image: url(../img/bbBg.svg); }
+  .round__tips {
+    background-image: url(../img/ybBg.svg); }
 
-.arm {
-  position: absolute;
-  top: 45%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  background-color: darkgray;
-  width: 3px;
-  height: 50px;
-  transform: rotate(-40deg); }
+.appLabel {
+  transition: all .3s ease-in-out;
+  opacity: 0; }
+  .appLabel__todo {
+    color: #fb8c00; }
+  .appLabel__budget {
+    color: #42a5f5; }
+  .appLabel__tips {
+    color: #ffd54f; }
 
-.forearm {
+.todo__arm {
   position: absolute;
-  top: 59%;
-  left: 40%;
+  top: 40%;
+  left: 28%;
   z-index: 10;
   transform-origin: top left;
-  background-color: darkgray;
-  width: 50px;
-  height: 3px;
+  background-image: url(../img/obArm.svg);
+  background-size: cover;
+  background-position: center;
+  width: 8rem;
+  height: 6rem;
   transition: all 2s; }
 
-.weyeL {
+.todo__eyebrow {
   position: absolute;
-  top: 40%;
-  left: 50.5%;
+  top: 35%;
+  left: 48%;
   z-index: 10;
+  transform-origin: top left;
+  background-image: url(../img/obEyebrow.svg);
+  background-size: cover;
+  background-position: center;
+  width: 3rem;
+  height: 1rem;
+  transition: all 2s; }
+
+.todo__eye {
+  position: absolute;
+  z-index: 8;
   background-color: white;
-  width: 6px;
-  height: 10px;
+  width: .6rem;
+  height: 1rem;
   border-radius: 50%;
   transition: all 1s; }
+  .todo__eye--L {
+    top: 40%;
+    left: 50.5%; }
+  .todo__eye--R {
+    top: 40%;
+    left: 54%; }
 
-.weyeR {
+.todo__pupil {
   position: absolute;
-  top: 40%;
-  left: 54%;
   z-index: 10;
-  background-color: white;
-  width: 6px;
-  height: 10px;
-  border-radius: 50%;
-  transition: all 1s;
-  z-index: 10; }
-
-.geyeL {
-  position: absolute;
-  top: 42%;
-  left: 51%;
-  z-index: 10;
-  background-color: grey;
-  width: 4px;
-  height: 5px;
+  background-color: #494949;
+  width: .4rem;
+  height: .5rem;
   border-radius: 50%;
   z-index: 11; }
+  .todo__pupil--L {
+    top: 42%;
+    left: 51%; }
+  .todo__pupil--R {
+    top: 42%;
+    left: 54%; }
 
-.geyeR {
-  position: absolute;
-  top: 42%;
-  left: 54%;
-  z-index: 10;
-  background-color: grey;
-  width: 4px;
-  height: 5px;
-  border-radius: 50%;
-  z-index: 11; }
-
-.backlist {
+.todo__backlist {
   background-image: url(../img/obBckList.svg);
   background-size: cover;
   background-position: center;
@@ -261,7 +230,7 @@ h3 {
   top: 50%;
   left: 46%; }
 
-.listExt {
+.todo__listExt {
   background-image: url(../img/obListExt.svg);
   background-size: cover;
   background-position: center;
@@ -269,15 +238,15 @@ h3 {
   border-right: 1px solid #a67c52;
   border-left: 1px solid #a67c52;
   border-bottom: 1px solid #a67c52;
-  width: 50px;
-  height: 50px;
+  width: 5.2rem;
+  height: 5rem;
   position: absolute;
   top: 51%;
   left: 51%;
   z-index: 2;
   transition: all 2s; }
 
-.list {
+.todo__list {
   background-image: url(../img/obList.svg);
   background-size: cover;
   background-position: top;
@@ -290,8 +259,8 @@ h3 {
 
 .budget__eyebrow {
   position: absolute;
-  top: 35%;
-  left: 46.5%;
+  top: 33%;
+  left: 45%;
   background-image: url(../img/bbeyebrow.svg);
   background-size: cover;
   background-position: top;
@@ -314,7 +283,7 @@ h3 {
 .budget__pig {
   position: absolute;
   top: 43%;
-  left: 22%;
+  left: 20%;
   z-index: 10;
   transform-origin: top right;
   background-image: url(../img/bbpig.svg);
@@ -347,6 +316,131 @@ h3 {
   transition: all .2s;
   transition-delay: .3s; }
 
+.tips__hand {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  background-image: url(../img/ybhand.svg);
+  background-size: cover;
+  background-position: top;
+  width: 2.5rem;
+  height: 2rem;
+  transform-origin: bottom right; }
+
+.tips__cog {
+  position: absolute;
+  transform-origin: center;
+  background-image: url(../img/ybcog.svg);
+  background-size: cover;
+  background-position: top; }
+  .tips__cog--1 {
+    width: 3rem;
+    height: 3rem;
+    top: 20%;
+    left: 67%; }
+  .tips__cog--2 {
+    width: 2rem;
+    height: 2rem;
+    top: 28%;
+    left: 70%;
+    transition-delay: .2s; }
+  .tips__cog--3 {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 26%;
+    left: 74%;
+    transition-delay: .4s; }
+
+.tips__math {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  z-index: 15;
+  opacity: 0;
+  transition: all 1s; }
+  .tips__math--1 {
+    background-image: url(../img/ybplus.svg);
+    background-size: cover;
+    background-position: top;
+    top: 46%;
+    left: 30%; }
+  .tips__math--2 {
+    background-image: url(../img/ybminus.svg);
+    background-size: cover;
+    background-position: top;
+    top: 36%;
+    left: 34%; }
+  .tips__math--3 {
+    background-image: url(../img/ybtwo.svg);
+    background-size: cover;
+    background-position: top;
+    top: 50%;
+    left: 32%; }
+  .tips__math--4 {
+    background-image: url(../img/ybmult.svg);
+    background-size: cover;
+    background-position: top;
+    top: 40%;
+    left: 36%; }
+
+.hoverBox {
+  width: 30rem;
+  height: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .hoverBox__org:hover .todo__listExt {
+    transform: translateY(3.5rem); }
+  .hoverBox__org:hover .todo__arm {
+    animation-name: armLoop;
+    animation-duration: 2s; }
+  .hoverBox__org:hover .todo__eyebrow {
+    transform: translateY(-1rem); }
+  .hoverBox__org:hover .todo__eye {
+    transform: scale(1.7); }
+  .hoverBox__blue:hover .budget__pig {
+    animation-name: handLoop;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite; }
+  .hoverBox__blue:hover .budget__coin {
+    transform: translateY(6rem); }
+  .hoverBox__blue:hover .budget__eyebrow {
+    transform: translateY(-1rem); }
+  .hoverBox__blue:hover .budget__smile {
+    width: .5rem;
+    height: .5rem;
+    transform: translateX(2px); }
+  .hoverBox__yellow:hover .tips__hand {
+    animation-name: handLoop;
+    animation-duration: .2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite; }
+  .hoverBox__yellow:hover .tips__cog {
+    animation-name: rotateInfinite;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+  .hoverBox__yellow:hover .tips__math--1 {
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+  .hoverBox__yellow:hover .tips__math--2 {
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .6s; }
+  .hoverBox__yellow:hover .tips__math--3 {
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .8s; }
+  .hoverBox__yellow:hover .tips__math--4 {
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.1s; }
+
 @keyframes armLoop {
   0% {
     transform: rotate(0deg); }
@@ -359,23 +453,33 @@ h3 {
   100% {
     transform: rotate(0deg); } }
 
-@keyframes pigLoop {
+@keyframes handLoop {
   0% {
     transform: rotate(-15deg); }
-  25% {
-    transform: rotate(25deg); }
   50% {
-    transform: rotate(-25deg); }
-  75% {
-    transform: rotate(15deg); }
+    transform: rotate(0deg); }
   100% {
     transform: rotate(-15deg); } }
+
+@keyframes rotateInfinite {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translate(-1rem, -3rem); } }
 
 .popup {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   background-color: #fffde7;
   width: 75%;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);

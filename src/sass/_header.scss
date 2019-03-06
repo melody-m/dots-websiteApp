@@ -1,73 +1,28 @@
+
 .header{
-    text-align: center;
-    margin-bottom: 12%;
-}
-.navigation{
-
-    display: inline-block;
-
-    &__line{
-        width: 10rem;
-        height: .5rem;
-
-        &--pink{
-            background-color: $color-primary; 
-        }
-
-        &--blue{
-            background-color: $color-secondary; 
-        }
-
-        &--yellow{
-            background-color: $color-tertiary; 
-        }
-    }
-
-    &__pink{
-        &:hover #pink_nav {
-            opacity: 100;
-        }
-    }
     
-    &__blue{
-        &:hover #blue_nav {
-            opacity: 100;
-        }
+    &__logo{
+        margin-bottom: 3rem;
     }
 
-    &__yellow{
-        &:hover #yellow_nav {
-            opacity: 100;
-        }
-
-    }
-
-
-}
-
-#pink_nav {
-    &,
-	&:link,
-	&:visited{
-        opacity: 0;
-        transition: all .3s;
+    &__intro{
+        text-align: center;
+        margin-bottom: 6rem;
     }
 }
 
-#blue_nav {
-    &,
-	&:link,
-	&:visited{
-        opacity: 0;
-        transition: all .3s;
-    }
+.logo{
+    width: 10rem;
+    height: 10rem;
+    margin: 2.5rem;
+    opacity: .75;
 }
 
-#yellow_nav {
-    &,
-	&:link,
-	&:visited{
-        opacity: 0;
-        transition: all .3s;
-    }
+.intro{
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    color:white;
+    opacity: .75;
+    margin-bottom: 5rem;
 }

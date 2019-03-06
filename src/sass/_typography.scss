@@ -5,8 +5,11 @@ body{
 }
 
 h1{
-    font-family: 'Amaranth', sans-serif;
-    font-size: 6rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    color: $color-grey-light-2;
 }
 
 h2{

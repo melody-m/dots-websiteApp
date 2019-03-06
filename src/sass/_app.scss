@@ -1,6 +1,11 @@
 .popup{
 
-    @include absCenter;
+    // @include absCenter;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
     background-color: $color-yellow-light-1;
     width: 75%;
     box-shadow: 0 2rem 4rem rgba($color-black, .2);
@@ -53,12 +58,6 @@
             position: relative;
         }
 
-
-        // &:target {
-            
-        //     opacity: 1;
-        //     transform: translate(-50%, -50%) scale(1);
-        // }
         
         &__close {
             &:link,
