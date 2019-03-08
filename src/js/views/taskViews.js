@@ -1,7 +1,7 @@
 export const taskDOM = {
-    inputDescription: '.add__description',
-    inputPrio: '.addTask__prio',
-    inputBtn : '.addTask__btn',
+    inputDescription: '.js-add__description',
+    inputPrio: '.js-add__input--prio',
+    inputBtn : '.js-add__task',
     prio1:'.container__prio1',
     prio2:'.container__prio2',
     prio3:'.container__prio3',
@@ -27,31 +27,32 @@ export const taskUI = {
     },
 
     addListTask : (obj, prio) => {
-        let element, html, newHtml;
+        let element, html;
+
+        html = `<div class="item clearfix" id="prio${prio}-${obj.id}">
+        <label class="item__object">
+            <input type="checkbox" class="item__checkbox">
+            <span class="item__checkmark"></span>
+        </label>
+        <div class="item__description">${obj.description}</div>
+        
+        <div class="right clearfix">
+            <div class="item__priority">${prio}</div>
+            <div class="item__delete">
+                <button class="item__delete--btn">&times;</button>
+            </div>
+        </div>`;      
 
         if (prio === 1 ){
+            element = taskDOM.prio1;              
+        } else if (prio === 2 ){            
+            element = taskDOM.prio2;             
+        } else {            
+            element = taskDOM.prio3;            
+        };                 
 
-            element = taskDOM.prio1;  
-            html = '<div class="item clearfix" id="prio1-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__priority">%priority%</div><div class="item__delete"><button class="item__delete--btn">X</button></div></div>';              
-
-        } else if (prio === 2 ){
-            
-            element = taskDOM.prio2;               
-            html = '<div class="item clearfix" id="prio2-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__priority">%priority%</div><div class="item__delete"><button class="item__delete--btn">X</button></div></div>';
-
-        } else {
-            
-            element = taskDOM.prio3;
-            html = '<div class="item clearfix" id="prio3-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__priority">%priority%</div><div class="item__delete"><button class="item__delete--btn">X</button></div></div>';
-           
-        }; 
-
-                    
-        newHtml = html.replace('%id%', obj.id);
-        newHtml = newHtml.replace('%description%', obj.description);
-        newHtml = newHtml.replace('%priority%', prio);
         
-        document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        document.querySelector(element).insertAdjacentHTML('beforeend', html);
     },
 
     addTotalTask : (value, prio) => {
@@ -70,15 +71,12 @@ export const taskUI = {
 
     deleteListTask : (selectorID) => {
 
-        let el;
-
-        el = document.getElementById(selectorID); // will give full id of element ex: prio1-0
+        const el = document.getElementById(selectorID); // will give full id of element ex: prio1-0
         el.classList.add('fadeOut');
 
-        el.addEventListener("transitionend", (event) => {
+        setTimeout(() => {
             el.parentNode.removeChild(el);
-          }, false);
-
+        },500);  // fade out takes .4s
     },
 
     clearfields : () => {

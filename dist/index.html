@@ -33,13 +33,10 @@
                     <div class="round round__toDo"></div>                  
                     <div class="todo__arm"></div>
                     <div class="todo__eyebrow"></div>
-                    <div class="todo__eye todo__eye--L"></div>
-                    <div class="todo__eye todo__eye--R"></div>
+                    <div class="todo__eye"></div>                   
+                   
 
-                    <div class="todo__pupil todo__pupil--L"></div>
-                    <div class="todo__pupil todo__pupil--R"></div>
-
-                    <div class="todo__backlist"></div>
+                    <!-- <div class="todo__backlist"></div> -->
                     <div class="todo__list"></div>
                     <div class="todo__listExt"></div>
                 </div>
@@ -93,9 +90,10 @@
 
     </div>
 
+    <!---------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- Popup UI -->
 
-    <div class="popup" id="popup__toDo">
+    <div class="popup collapse" id="popup__toDo">
 
         <div class="popup__title popup__title--A">
             <h2>To Do List</h2>                
@@ -105,78 +103,60 @@
 
         <div class="popup__add popup__add--A">
             <div class="add__container">
-                <input type="text" class="add__description add__description--A" placeholder="Add a new task">
-                <label for="id_select"> Priority </label>
-                <select class="addTask__prio" id="id_select">
+                <input type="text" class="add__description add__description--A js-add__description" placeholder="Add a new task">
+                <label for="id_select" class="add__input--label"> Priority </label>
+                <select class="add__input--prio js-add__input--prio" id="id_select">
                     <option value="1" selected>1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
 
-                <button class="addTask__btn">V</button>
-                                    
+                <button class="add__input--btn js-add__task">
+                    <img src="img/validate-org.svg" alt="">
+                </button>                                    
             </div>
         </div>
 
         <div class="popup__tasks">
 
             <div class="row">
-
-
                 <div class= "col-1-of-3 content__total content__total--A">
                     <div class="margin-bottom"><h3 class="content__overview--A">Overview</h3></div>           
                     
                     <div class= "content__sum">
-                        <div class="total js-total__prio1"><span class="totalValue1">0</span> important tasks to do </div>
-                        <div class="total js-total__prio2"><span class="totalValue2">0</span> mildly important tasks to do </div>
-                        <div class="total js-total__prio3"><span class="totalValue3">0</span> tasks to do at some point</div>
+                        <div class="total js-total__prio1"><span class="totalValue totalValue1">0</span> important tasks to do </div>
+                        <div class="total js-total__prio2"><span class="totalValue totalValue2">0</span> mildly important tasks to do </div>
+                        <div class="total js-total__prio3"><span class="totalValue totalValue3">0</span> tasks to do at some point</div>
                     </div>
                
-                </div>
-
-                        
+                </div>                        
     
                 <div class= "col-2-of-3 content__list">
-                    <div class="margin-bottom"><h3 class="content__overview--A">Your to do list</h3></div>
+                    <div class="content__title margin-bottom">
+                        <div class="content__icon">
+                            <img src="img/todo.svg" alt="list icon">
+                        </div>
+                        <h3 class="content__overview--A">Your to do list</h3></div>
 
                     <div class="container__priority">
                         <div class="container__prio1">
-
-                                <!-- <div class="item item--A clearfix" id="prio1-%id%">
-                                    <div class="item__description">Hoover the living room</div>
-                                    <div class="right clearfix">
-                                        <div class="item__priority">1</div>
-                                        <div class="item__delete">
-                                            <button class="item__delete--btn">x</i></button>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                
+                                <!-- <div></div> -->                                
                         </div>
                     
-                        <div class="container__prio2">
-                        
+                        <div class="container__prio2">                        
                         </div>    
 
-                        <div class="container__prio3">
-                        
+                        <div class="container__prio3">                        
                         </div>
-                    </div>
-                    
+                    </div>                 
         
-                </div> 
-                
+                </div>                 
             </div>
-
-        </div>    
-            
+        </div>                
     </div>
 
 
-
-
-
-    <div class="popup" id="popup__budget">
+    <div class="popup collapse" id="popup__budget">
 
             <div class="popup__title popup__title--B">
                 <h2>Budget</h2>                
@@ -193,7 +173,11 @@
                     <input type="text" class="add__description add__description--B add__budgetDesc" placeholder="Add a description">
                     
                     <input type="number" class="add__value" placeholder="Value">
-                    <button class="add__budgetBtn">V</i></button>                                     
+
+                    <button class="add__input--btn js-add__budget">
+                        <img src="img/validate-blue.svg" alt="">
+                    </button>
+                                                       
                 </div>
             </div>
 
@@ -274,7 +258,7 @@
 
 
 
-    <div class="popup" id="popup__tips">
+    <div class="popup collapse" id="popup__tips">
 
         <div class="popup__title popup__title--C">
             <h2>Tips Helper</h2>                
@@ -285,7 +269,7 @@
         <div class="popup__add popup__add--C">
             <div class="add__container">
                 
-                <input type="text" class="add__description add__description--C" placeholder="Enter the value of your bill">
+                <input type="text" class="add__description add__description--C add__bill" placeholder="Enter the value of your bill">
 
                 <label for="id_tips"> Tip percentage </label>
                 <select class="add__tips" id="id_tips">
@@ -295,7 +279,9 @@
                     <option value="20">20</option>
                 </select>
 
-                <button>V</button>
+                <button class="add__input--btn js-add__tip">
+                    <img src="img/validate-ylw.svg" alt="">
+                </button>
                                     
             </div>
         </div>
@@ -324,18 +310,21 @@
                         <div><h3 class="content__overview--C">Your total bill</h3></div>
                         
                         <div class="tips__result">
-                                <div class="tips__text"> Calculated tip : <span class="tips__number">£5</span>
+                                <div class="tips__bill">Initial bill: <span class="tips__number" id="bill-display"></span> </div>
+                                <div class="tips__text"> Calculated tip : <span class="tips__number" id="tip-display"></span>
                                     <div class="right">
-                                            Total bill: <span class="tips__number">£80</span>
+                                            Total bill: <span class="tips__number" id="total-display"></span>
                                     </div> 
                                 </div>
 
                                 <div class="tips__split">-- Splitting the bill ? --</div>
                                 <label for="id_people">Enter the number of person</label>
-                                <input type="number" id="id_people" class="tips__people">
-                                <button>V</button>
+                                <input id="id_people" class="tips__people">
+                                <button class="tips__addPeople">V</button>
         
-                                <div class="tips__text">Results : <span class="tips__number">£20</span> /pp</div>
+                                <div class="tips__text">Results : <span class="tips__number" id="share-display"></span> /pp</div>
+
+                                <button class="tips__clear">CLEAR</button>
 
                         </div>                 
 

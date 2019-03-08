@@ -11,9 +11,8 @@
     box-shadow: 0 2rem 4rem rgba($color-black, .2);
     border-radius: .5rem;
     overflow: hidden;
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(.25);
-    transition: all .4s .15s; //last value > delay
+    transition: all .3s ease-in;
+    //transition: all .4s .15s; //last value > delay
 
         &__title{        
             padding: 1.8rem;
@@ -60,9 +59,10 @@
 
         
         &__close {
+            z-index: 50;
             &:link,
             &:visited {
-                color: currentColor;
+                color: $color-white;
                 position: absolute;
                 top: 2.5rem;
                 right: 2.5rem;
@@ -80,18 +80,38 @@
 
 }
 
+.container{
+    &__priority{
+    width: 80%;
+    margin: 0 auto;
+    }
+    &__prio1{
+        background-image: linear-gradient(to right, rgba($color-primary-dark,0), rgba($color-primary-dark,0.7));
+        background-size: cover;
+    }
+    &__prio2{
+        background-image: linear-gradient(to right, rgba($color-primary-dark2,0), rgba($color-primary-dark2,0.7));
+        background-size: cover;
+    }
+    &__prio3{
+        background-image: linear-gradient(to right, rgba($color-primary,0), rgba($color-primary,0.7));
+        background-size: cover;
+    }
+}
 
 .add{
 
     &__container{
-        text-align: center;
+
+        display: flex;        
+        justify-content: center;
+        align-items: center;
     }
     
     &__description{
-        margin-right: 2rem;
-        padding: .5rem;
+        margin-right: 2rem;       
         width: 30%;        
-        padding: .3rem;
+        padding: .3rem .5rem;
         outline: none;
 
         &--A {
@@ -124,13 +144,40 @@
         }
     }
 
+    &__input{
+        &--label{
+            margin-right: 2rem;
+        }
+        
+        &--btn {
+            outline: none;
+            width: 3rem;
+            height: 3rem;         
+            border: none;
+            background-color: transparent; 
+            cursor: pointer;          
+            
+            & img{
+                width: 100%;
+            }
+        }
+        &--prio{
+            padding: .3rem;
+            margin-right: 2rem;
+            color: $color-primary;
+            background-color: $color-yellow-light-1;
+            border: 1px solid $color-primary;
+        }
+    }
     &__value,
     &__type {
         margin-right: 2rem;
-        padding: .3rem;
+        padding: .3rem .5rem;
         background-color: $color-yellow-light-1;
         border: 1px solid $color-secondary;
         color: $color-secondary;
+        outline: none;
+
         &::placeholder{
             font-size: 1.2rem;
             color: $color-secondary;
@@ -191,6 +238,19 @@
     &__list{
         padding: 4rem;
     }
+    &__title{
+        display: inline-block;
+    }
+    &__icon{
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.2rem;
+        display: inline-block;
+
+        & img{
+            width: 100%;
+        }
+    }
 }
 
 .margin-bottom{
@@ -202,9 +262,13 @@
 }
 
 .item {
-    font-size: 1.4rem;
-    padding: .5rem;
-    display: block;
+    font-size: 1.4rem;    
+    display: block;    
+    border-bottom: 1px solid $color-grey-light-2;
+    
+    &:hover .item__delete--btn {
+        transform: translateX(0);
+    }
 
     &--A{
         border-bottom: 1px solid $color-primary-medium;
@@ -218,19 +282,108 @@
         border-bottom: 1px solid $color-tertiary-dark;
     }
 
+    &__object{
+        float: left;
+        display: block;
+        position: relative;
+        padding-left: 3.5rem;
+        margin-bottom: 1.2rem;
+        cursor: pointer;
+        font-size: 2.2rem;
+        user-select: none;
+
+        & input{        
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        & input:checked ~ .item__checkmark:after {
+            display: block;
+        }
+        &  .item__checkmark:after {
+            left: 5px;
+            top: -8px;
+            width: 1rem;
+            height: 2rem;
+            border: solid $color-grey-medium;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+          }
+          
+    }
+    &__checkmark {
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        border: 1px solid $color-grey-medium;   
+        background-color: white;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+    }
 
     &__priority {
         float: left;
+        padding: .5rem;
         font-size: 1.6rem;
         margin-right: 1rem;
+        padding-left: 1rem;
         transition: transform 0.3s;
+        border-left: 1px solid white;
+        color: white;
     }
     &__description {
         float: left;
+        padding: .5rem;
+    }
+
+    &__expense{
+        float: left;        
+    }
+
+    &__value {
+        float: left;
+        padding: .5rem;
+        font-size: 1.6rem;
+        margin-right: .5rem;
+        padding-left: 1rem;
+               
+    }
+    &__percentage{
+        font-size: 1rem;
+        float: left;
+        padding: .1rem;
+        margin-right: .5rem;
+        border: 1px solid currentColor;
+        transform: translateY(7px);
+        
     }
     
     &__delete {
         float: left;
+        overflow: hidden;
+                
+
+        &--btn{
+            font-size: 2.6rem;            
+            color: white;           
+            //background-color: rgba(red,.5);
+            padding: 0 1rem;            
+            border: none;
+            border-left: 1px solid white;
+            cursor: pointer;  
+            transition: all .3s ease-out;            
+            
+            transform: translateX(-3.8rem);
+        }
     }
 }
 
@@ -343,14 +496,10 @@
 }
 
 
-.appear {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
 
-        transition: all .3s ease-in;
 
+
+.collapse{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
 }
-
-
-
-

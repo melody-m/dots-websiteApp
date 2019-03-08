@@ -1,6 +1,8 @@
 // COLORS
 
 $color-primary:#fb8c00;
+$color-primary-dark:#fb3b00;
+$color-primary-dark2:#fb5c00;
 $color-primary-medium:#ffcc80;
 $color-primary-light:#ffe2a2;
 
@@ -54,17 +56,15 @@ $gutter-horizontal: 6rem;
     transition: opacity 0.4s ease-out;
 }
 
+
+.appear {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .none {
     display: none;
 }
-
-
-// .appear {
-//     opacity: 1;
-//     transform: translate(-50%, -50%) scale(1);
-
-//     transition: all .3s ease-in;
-// }
 
 .clearfix::after {
     content: "";

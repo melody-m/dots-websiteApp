@@ -23,19 +23,38 @@ h3{
     display: inline-block;
 }
 
+label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+}
+
 .navigation__link {
 
     font-size: 1.5rem;
 }
 
 .circle__link{
-    font-family: 'Amaranth', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 3rem;
     text-decoration: none;
 }
-
+.item{
+    &__description{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.6rem;
+    }
+}
 .task__sum{
     font-family: 'Merriweather', serif;
+}
+.totalValue{
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    margin-right: 1rem;
+
+    &1{color: $color-primary-dark;}
+    &2{color: $color-primary-dark2;}
+    &3{color: $color-primary;}
 }
 
 .budget__header {

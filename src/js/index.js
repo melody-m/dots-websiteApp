@@ -7,77 +7,95 @@ import {taskCtrl} from './models/Task';
 import {taskDOM} from './views/taskViews';
 import {taskUI} from './views/taskViews';
 
+import{tipCtrl} from './models/Tip';
+import {tipsDOM} from './views/tipsViews';
+import {tipsUI} from './views/tipsViews';
 
+class Popup {
+    constructor(circleBtn, container, closeBtn) {
+        this.circleBtn = circleBtn;
+        this.container = container;
+        this.closeBtn = closeBtn;           
+    }
+
+    popupExpand(cont){
+        cont.classList.remove('collapse');  
+        cont.classList.add('appear');
+    };
+
+    popupClose(cont){
+        cont.classList.remove('appear');  
+        cont.classList.add('collapse');
+    }
+}
+
+const popDOM = {
+    btnToDo : document.getElementById('button-toDo'),
+    btnBudget: document.getElementById('button-budget'),
+    btnTips : document.getElementById('button-tips'),
+    toDo : document.getElementById('popup__toDo'),
+    budget: document.getElementById('popup__budget'),
+    tips : document.getElementById('popup__tips'),
+    closeToDo : document.getElementById('close__toDo'),
+    closeBudget : document.getElementById('close__budget'),
+    closeTips : document.getElementById('close__tips'),
+    taskInputBtn : document.querySelector('.add__task--btn')
+};
+
+const popupTask = new Popup(popDOM.btnToDo, popDOM.toDo, popDOM.closeToDo);
+const popupBudget = new Popup(popDOM.btnBudget, popDOM.budget, popDOM.closeBudget);
+const popupTips = new Popup(popDOM.btnTips, popDOM.tips, popDOM.closeTips);
+
+const popups = [popupTask, popupBudget, popupTips];
 
 /************************************************************************************* */
 //GLOBAL
 
 function init(){
 
-    const popDOM = {
-        toDo : document.getElementById('popup__toDo'),
-        budget: document.getElementById('popup__budget'),
-        tips : document.getElementById('popup__tips')
+    window.onload = () => {
+        const circles = document.querySelectorAll('.circle');
+        
+        for(let i=0; i< circles.length; i++){
+            
+            ((i) => {
+                setTimeout(() => {
+                    // circles[i].style.animationName = 'bounceInLeft';
+                    circles[i].style.opacity = '1' ;          
+                }, 200*i);                           
+            })(i);        }
     };
 
-    //Popup to do tasks
-    document.getElementById('button-toDo').addEventListener('click', () => {
-        popDOM.toDo.classList.toggle('appear');
-        popDOM.budget.classList.toggle('none');
-        popDOM.tips.classList.toggle('none');
-    });
-    document.getElementById('close__toDo').addEventListener('click', () => {
-        popDOM.toDo.classList.toggle('appear');
-        popDOM.budget.classList.toggle('none');
-        popDOM.tips.classList.toggle('none');
-    });
 
-    //Popup budget
-    document.getElementById('button-budget').addEventListener('click', () => {
-        popDOM.budget.classList.toggle('appear');
-        popDOM.toDo.classList.toggle('none');
-        popDOM.tips.classList.toggle('none');
-    });
+    popups.forEach((cur) => {
 
-    document.getElementById('close__budget').addEventListener('click', () => {
-        popDOM.budget.classList.toggle('appear');
-        popDOM.toDo.classList.toggle('none');
-        popDOM.tips.classList.toggle('none');
-    });
+        cur.circleBtn.addEventListener('click', () => {        
+            cur.popupExpand(cur.container);
+        })
+        cur.closeBtn.addEventListener('click', () => {
+            cur.popupClose(cur.container);
+        })
+    })
 
-    //Popup tips
-    document.getElementById('button-tips').addEventListener('click', () => {
-        popDOM.tips.classList.toggle('appear');
-        popDOM.toDo.classList.toggle('none');
-        popDOM.budget.classList.toggle('none');
-    });
-    document.getElementById('close__tips').addEventListener('click', () => {
-        popDOM.tips.classList.toggle('appear');
-        popDOM.toDo.classList.toggle('none');
-        popDOM.budget.classList.toggle('none');
-    });
+    taskEventListener();
+    budgetEventListener();
+    tipsEventListener();
 
 }
+
+
+
 
 /************************************************************************************ */
 //BUDGET CONTROLLER
 
 
-function initBudget(){
+function budgetEventListener(){
     const DOM = DOMstrings;
 
     document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
-    document.addEventListener('keypress', function(event) {
-    if (event.keyCode === 13 || event.which === 13) {
-        ctrlAddItem();
-    }
-    });
-
     document.querySelector(DOM.delete).addEventListener('click', ctrlDeleteItem);
-
-
     budgetUI.displayMonth();
-
 };
 
 
@@ -162,23 +180,28 @@ function ctrlDeleteItem(e) {
 };
 
 /************************************************************************************************************ */
-//TO DO CONTROLLER
+//TASK CONTROLLER
 
+// var someVarName = "value";
+// localStorage.setItem("someVarKey", someVarName);
+// var someVarName = localStorage.getItem("someVarKey");
+
+function taskEventListener(){
+    
     document.querySelector(taskDOM.inputBtn).addEventListener('click', ctrlAddTask);
-    document.addEventListener('keypress', (event) => {
-        if (event.keyCode === 13 || event.which === 13) {
-            ctrlAddTask();
-        }
-        });
     
     document.querySelector(taskDOM.container).addEventListener('click', ctrlDeleteTask);
+
+}
 
 
 function ctrlAddTask() {
         const input = taskUI.getInput();
 
-        if (input.description !== "") {            
+        if (input.description !== "") {         
+
             const newItem = taskCtrl.addTask(input.description, input.priority, input.type);
+            
             taskUI.addListTask(newItem, input.priority);
         }
         
@@ -192,22 +215,24 @@ function ctrlAddTask() {
 
 function ctrlDeleteTask(event){
 
-    const taskID = event.target.parentNode.parentNode.parentNode.id;      
-
+    const taskID = event.target.parentNode.parentNode.parentNode.id;   
+    
     const splitID = taskID.split('-');
     const type = splitID[0];
     const ID = parseInt(splitID[1]);
 
     const prio = parseInt(type.charAt(4));
-    
-    taskCtrl.deleteTask(ID,type);
-    
-    taskUI.deleteListTask(taskID);
-    
-    taskCtrl.calcTotalPrio(type);
-    const totalPrio = taskCtrl.getTotalPrio(type);
 
-    taskUI.addTotalTask(totalPrio,prio);
+    if(taskID){
+        taskCtrl.deleteTask(ID,type);
+        
+        taskUI.deleteListTask(taskID);
+        
+        taskCtrl.calcTotalPrio(type);
+        const totalPrio = taskCtrl.getTotalPrio(type);
+    
+        taskUI.addTotalTask(totalPrio,prio);
+    }   
     
 };
 
@@ -218,5 +243,47 @@ function ctrlDeleteTask(event){
 //TIPS CONTROLLER
 
 
-initBudget();
+function tipsEventListener(){    
+
+    tipsDOM.addTip.addEventListener('click', ctrlAddTip);
+
+    tipsDOM.addPeople.addEventListener('click', ctrlCalcShare);
+    tipsDOM.clear.addEventListener('click', () => {
+        tipsUI.clearResults();
+        tipCtrl.clearData();
+    });
+};
+
+
+function ctrlAddTip() {
+    
+    tipsUI.clearResults();
+    tipCtrl.clearData();
+
+    if(tipsDOM.inputBill !== ""){
+
+        const inputTip = tipsUI.getInput();
+        const tip = tipCtrl.calcTip(inputTip.bill, inputTip.tipValue);
+        const totalBill = tipCtrl.calcTotal(inputTip.bill, inputTip.tipValue);
+
+        tipsUI.clearfields();
+        tipsUI.displayResults(inputTip.bill, tip, totalBill);        
+    }
+
+};
+
+function ctrlCalcShare() {
+    if(tipsDOM.inputPeople !== ""){
+
+        const inputPeople = tipsUI.getPeople();        
+        const billShare = tipCtrl.calcShare(inputPeople.people);
+
+        tipsUI.clearfields();
+        tipsUI.displayShare(billShare);        
+    }
+    
+}
+
+/************************************************************************************************************ */
+
 init();

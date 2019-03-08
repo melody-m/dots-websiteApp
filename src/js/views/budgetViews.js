@@ -2,7 +2,7 @@ export const DOMstrings = {
     inputType: '.add__type',
     inputDescription: '.add__budgetDesc',
     inputValue: '.add__value',
-    inputBtn: '.add__budgetBtn',
+    inputBtn: '.js-add__budget',
     incomeContainer: '.income__list',
     expensesContainer: '.expenses__list',
     budgetLabel: '.budget__value',
@@ -53,20 +53,31 @@ export const budgetUI = {
             if (type === 'inc') {
                 element = DOMstrings.incomeContainer;
                 
-                html = '<div class="item clearfix" id="inc-%id%"> <div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn">X</button></div></div></div>';
+                html = `<div class="item clearfix" id="inc-${obj.id}"> 
+                <div class="item__description">${obj.description}</div>
+                <div class="right clearfix">
+                    <div class="item__expense">
+                        <div class="item__value">${formatNumber(obj.value, type)}</div>
+                    </div>
+                    <div class="item__delete"><button class="item__delete--btn">&times;</button></div></div></div>
+                </div>`;
+
             } else if (type === 'exp') {
                 element = DOMstrings.expensesContainer;
                 
-                html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn">X</button></div></div></div>';
-            }
-            
-            // Replace the placeholder text with some actual data
-            newHtml = html.replace('%id%', obj.id);
-            newHtml = newHtml.replace('%description%', obj.description);
-            newHtml = newHtml.replace('%value%', formatNumber(obj.value, type));
-            
+                html = `<div class="item clearfix" id="exp-${obj.id}">
+                <div class="item__description">${obj.description}</div>
+
+                <div class="right clearfix">
+                    <div class="item__expense">
+                        <div class="item__value">${formatNumber(obj.value, type)}</div>
+                        <div class="item__percentage">21%</div>
+                    </div>
+                    <div class="item__delete"><button class="item__delete--btn">&times;</button></div></div></div>
+                </div>`;
+            }            
             // Insert the HTML into the DOM
-            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);        
+            document.querySelector(element).insertAdjacentHTML('beforeend', html);        
     },
 
     clearFields:() => {
