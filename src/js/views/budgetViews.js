@@ -55,11 +55,11 @@ export const budgetUI = {
                 
                 html = `<div class="item clearfix" id="inc-${obj.id}"> 
                 <div class="item__description">${obj.description}</div>
-                <div class="right clearfix">
-                    <div class="item__expense">
+                <div class="item__green right clearfix">
+                    <div class="item__income">
                         <div class="item__value">${formatNumber(obj.value, type)}</div>
                     </div>
-                    <div class="item__delete"><button class="item__delete--btn">&times;</button></div></div></div>
+                    <div class="item__delete"><button class="item__green item__delete--btn">&times;</button></div></div></div>
                 </div>`;
 
             } else if (type === 'exp') {
@@ -68,12 +68,12 @@ export const budgetUI = {
                 html = `<div class="item clearfix" id="exp-${obj.id}">
                 <div class="item__description">${obj.description}</div>
 
-                <div class="right clearfix">
+                <div class="item__red right clearfix">
                     <div class="item__expense">
                         <div class="item__value">${formatNumber(obj.value, type)}</div>
                         <div class="item__percentage">21%</div>
                     </div>
-                    <div class="item__delete"><button class="item__delete--btn">&times;</button></div></div></div>
+                    <div class="item__delete"><button class="item__red item__delete--btn">&times;</button></div></div></div>
                 </div>`;
             }            
             // Insert the HTML into the DOM

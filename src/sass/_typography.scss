@@ -38,10 +38,37 @@ label{
     font-size: 3rem;
     text-decoration: none;
 }
+
+.popup{
+    &__tips{
+        & ul{
+            font-family: 'Merriweather', serif;
+            list-style: none;
+            font-size : 1.6rem;
+            line-height: 2.2rem;
+        }
+    }
+}
 .item{
+    font-size: 1.4rem;
+    &__object{
+        font-size: 2.2rem;
+    }
     &__description{
         font-family: 'Open Sans', sans-serif;
         font-size: 1.6rem;
+    }
+    &__priority{
+        font-size: 2rem;
+    }
+    &__value{
+        font-size: 1.6rem;
+    }
+    &__percentage{
+        font-size: 1rem;
+    }
+    &__delete--btn{
+        font-size: 1.5rem;
     }
 }
 .task__sum{
@@ -61,7 +88,24 @@ label{
     font-family: 'Merriweather', serif;
 }
 
-.tips__split{
+th{
     font-family: 'Merriweather', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.tips{
+    &__split{
+    font-family: 'Merriweather', serif;
+    font-size: 1.6rem;
+    }
+    &__share{
+        &--label{
+            font-size: 1.3rem;
+        }
+    }
+    &__clear{
+        font-size: 1.5rem;
+    }
 
 }

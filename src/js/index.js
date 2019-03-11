@@ -60,7 +60,7 @@ function init(){
             
             ((i) => {
                 setTimeout(() => {
-                    // circles[i].style.animationName = 'bounceInLeft';
+                    circles[i].style.animationName = 'bounceInLeft';
                     circles[i].style.opacity = '1' ;          
                 }, 200*i);                           
             })(i);        }
@@ -182,10 +182,6 @@ function ctrlDeleteItem(e) {
 /************************************************************************************************************ */
 //TASK CONTROLLER
 
-// var someVarName = "value";
-// localStorage.setItem("someVarKey", someVarName);
-// var someVarName = localStorage.getItem("someVarKey");
-
 function taskEventListener(){
     
     document.querySelector(taskDOM.inputBtn).addEventListener('click', ctrlAddTask);
@@ -274,7 +270,9 @@ function ctrlAddTip() {
 
 function ctrlCalcShare() {
     if(tipsDOM.inputPeople !== ""){
-
+        if(tipsDOM.displayShare.innerHTML !== ''){ // allow to recalculate split bill multiple times
+           tipsDOM.displayShare.innerHTML = '';
+        }
         const inputPeople = tipsUI.getPeople();        
         const billShare = tipCtrl.calcShare(inputPeople.people);
 

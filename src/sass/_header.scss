@@ -3,11 +3,17 @@
     
     &__logo{
         margin-bottom: 3rem;
+        @include respond(small-tab){
+            text-align: center;
+        }
     }
 
     &__intro{
         text-align: center;
         margin-bottom: 6rem;
+        @include respond(small-tab){
+            margin-bottom: 0;
+        }
     }
 }
 

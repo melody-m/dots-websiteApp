@@ -5,7 +5,7 @@ export const tipsDOM = {
     displayBill : document.getElementById('bill-display'),
     displayTip : document.getElementById('tip-display'),
     displayTotal : document.getElementById('total-display'),
-    addPeople : document.querySelector('.tips__addPeople'),
+    addPeople : document.querySelector('.tips__people--add'),
     inputPeople : document.querySelector('.tips__people'),
     displayShare : document.getElementById('share-display'),
     clear : document.querySelector('.tips__clear')
@@ -24,9 +24,9 @@ export const tipsUI = {
 
     displayResults : (bill, tip, totalBill)  => {
         
-        const billHtml = `£${bill}`
-        const tipHtml = `£${tip}`;
-        const totalHtml = `£${totalBill}`;
+        const billHtml = `£${bill.toFixed(2)}`
+        const tipHtml = `£${tip.toFixed(2)}`;
+        const totalHtml = `£${totalBill.toFixed(2)}`;
 
         tipsDOM.displayBill.insertAdjacentHTML('beforeend',billHtml);
         tipsDOM.displayTip.insertAdjacentHTML('beforeend',tipHtml);
@@ -59,7 +59,7 @@ export const tipsUI = {
     },
 
     displayShare : (share) => {
-        const shareHtml = `£${share}`;
+        const shareHtml = `£${share.toFixed(2)}`;
 
         tipsDOM.displayShare.insertAdjacentHTML('afterbegin',shareHtml);
 

@@ -131,25 +131,29 @@
                
                 </div>                        
     
-                <div class= "col-2-of-3 content__list">
-                    <div class="content__title margin-bottom">
-                        <div class="content__icon">
-                            <img src="img/todo.svg" alt="list icon">
-                        </div>
-                        <h3 class="content__overview--A">Your to do list</h3></div>
+                <div class= "col-2-of-3">
 
-                    <div class="container__priority">
-                        <div class="container__prio1">
-                                <!-- <div></div> -->                                
-                        </div>
-                    
-                        <div class="container__prio2">                        
-                        </div>    
-
-                        <div class="container__prio3">                        
-                        </div>
-                    </div>                 
+                        <div class="content__list">
+                            <div class="content__title margin-bottom">
+                                <div class="content__icon">
+                                    <img src="img/todo.svg" alt="list icon">
+                                </div>
+                                <h3 class="content__overview--A">Your to do list</h3></div>
         
+                            <div class="container__priority">
+                                <div class="container__prio1">
+                                        <!-- <div></div> -->                                
+                                </div>
+                            
+                                <div class="container__prio2">                        
+                                </div>    
+        
+                                <div class="container__prio3">                        
+                                </div>
+                            </div>                
+                        </div>
+
+
                 </div>                 
             </div>
         </div>                
@@ -183,7 +187,7 @@
 
 
 
-            <div class="popup__tasks">
+            <div class="popup__budget">
 
                     <div class="row delete">
         
@@ -200,7 +204,7 @@
                                         <div class="budget__value">0.00</div>
                                 </div>                                  
                                        
-                                <div class="budget__income clearfix">
+                                <div class="budget__income clearfix">                                   
                                     <div class="budget__income--text">Income</div>
                                     <div class="right">
                                         <div class="budget__income--value">0.00</div>
@@ -208,7 +212,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="budget__expenses clearfix">
+                                <div class="budget__expenses clearfix">    
                                     <div class="budget__expenses--text">Expenses</div>
                                     <div class="right clearfix">
                                         <div class="budget__expenses--value">0.00 <span class="budget__expenses--percentage">0%</span></div>
@@ -220,36 +224,49 @@
                         </div>
         
                                 
-            
-                        <div class= "col-1-of-3 content__list">
-                            <div class="margin-bottom"><h3 class="content__overview--B">Your Incomes</h3></div>  
-                            
-                            
-                            <div class="income__list">
-                                 <!-- <div class="item clearfix" id="inc-%id%"> 
-                                        <div class="item__description">%description%</div>
-                                        <div class="right clearfix">
-                                            <div class="item__value">%value%</div>
-                                            <div class="item__delete">
-                                                <button class="item__delete--btn">X</button>
+                        <div class="col-2-of-3">
+                            <div class= "content__column">
+                                
+                                <div class="margin-bottom">
+                                    <div class="content__icon">
+                                            <img src="img/budget.svg" alt="budget icon">
+                                    </div>
+                                    <h3 class="content__overview--B">Your Incomes</h3>
+                                </div>  
+                                
+                                
+                                <div class="income__list">
+                                     <!-- <div class="item clearfix" id="inc-%id%"> 
+                                            <div class="item__description">%description%</div>
+                                            <div class="right clearfix">
+                                                <div class="item__value">%value%</div>
+                                                <div class="item__delete">
+                                                    <button class="item__delete--btn">X</button>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>' -->                                
-                            </div>
-                                          
-                        
-                        </div> 
-
-                        <div class= "col-1-of-3 content__list">
-                            <div class="margin-bottom"><h3 class="content__overview--B">Your Expenses</h3></div>
-                            
-                            <div class="expenses__list">
-
-                            </div>
+                                        </div>' -->                                
+                                </div>
                                               
                             
-                        </div> 
-                        
+                            </div> 
+
+
+                            <div class= "content__column">
+                                <div class="margin-bottom">
+                                    <div class="content__icon">
+                                            <img src="img/budget.svg" alt="list icon">
+                                    </div>
+                                    <h3 class="content__overview--B">Your Expenses</h3>
+                                </div>
+                                
+                                <div class="expenses__list">
+    
+                                </div>                                                 
+                                
+                            </div>                             
+                            
+                        </div>
+
                     </div>
         
                 </div>    
@@ -280,19 +297,21 @@
                 </select>
 
                 <button class="add__input--btn js-add__tip">
-                    <img src="img/validate-ylw.svg" alt="">
+                    <img src="img/validate-grey.svg" alt="validate">
                 </button>
                                     
             </div>
         </div>
 
-        <div class="popup__tasks">
+        <div class="popup__tips">
 
             <div class="row">
 
 
                 <div class= "col-1-of-3 content__total content__total--C">
-                    <div class="margin-bottom"><h3 class="content__overview--C">Tip Guide</h3></div>           
+                    <div class="margin-bottom">
+                        <h3 class="content__overview--C">Tip Guide</h3>
+                    </div>           
                     
                     <div>
                         <ul>
@@ -307,24 +326,53 @@
                 </div>
 
                 <div class= "col-2-of-3 content__list">
-                        <div><h3 class="content__overview--C">Your total bill</h3></div>
+                        <div class="margin-bottom">
+                            <div class="content__icon">
+                                    <img src="img/tips.svg" alt="tips icon">
+                            </div>
+                            <h3 class="content__overview--C">Your total bill</h3>
+                        </div>
                         
                         <div class="tips__result">
-                                <div class="tips__bill">Initial bill: <span class="tips__number" id="bill-display"></span> </div>
-                                <div class="tips__text"> Calculated tip : <span class="tips__number" id="tip-display"></span>
-                                    <div class="right">
-                                            Total bill: <span class="tips__number" id="total-display"></span>
-                                    </div> 
-                                </div>
+
+                            <table class="tips__table">
+                                <tr>
+                                    <th class="tips__header">Initial bill</th>
+                                    <th class="tips__header">Calculated tip</th>
+                                    <th>Total bill</th>
+                                </tr>
+                                <tr>
+                                    <td><span class="tips__number" id="bill-display"></span></td>
+                                    <td><span class="tips__number" id="tip-display"></td>
+                                    <td><span class="tips__number" id="total-display"></td>
+                                </tr>
+                            </table>
+
 
                                 <div class="tips__split">-- Splitting the bill ? --</div>
-                                <label for="id_people">Enter the number of person</label>
-                                <input id="id_people" class="tips__people">
-                                <button class="tips__addPeople">V</button>
-        
-                                <div class="tips__text">Results : <span class="tips__number" id="share-display"></span> /pp</div>
+
+                                
+                                <div class="tips__share">
+                                    <label for="id_people">Enter the number of person</label>
+                                    <input id="id_people" class="tips__people">
+                                    <button class="tips__people--add">
+                                            <img src="img/validate-grey.svg" alt="validate">
+                                    </button>
+                                </div>
+                                
+
+                                <table class="tips__table tips__table--small">
+                                    <tr>                                            
+                                        <th>Share per person</th>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="tips__number" id="share-display"></span></td>                                            
+                                    </tr>
+                                </table>      
 
                                 <button class="tips__clear">CLEAR</button>
+                            
+
 
                         </div>                 
 

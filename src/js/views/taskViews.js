@@ -37,9 +37,9 @@ export const taskUI = {
         <div class="item__description">${obj.description}</div>
         
         <div class="right clearfix">
-            <div class="item__priority">${prio}</div>
+            <div class="item__priority item__priority--${prio}">${prio}</div>
             <div class="item__delete">
-                <button class="item__delete--btn">&times;</button>
+                <button class="item__delete--btn item__priority--${prio}">&times;</button>
             </div>
         </div>`;      
 

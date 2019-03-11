@@ -9,7 +9,20 @@
 
 html {
 	//This defines what 1rem is
-	font-size: 62.5%; /* =10px on normal browser considering a default of 16px=100% on browsers*/
+    font-size: 62.5%; /* =10px on normal browser considering a default of 16px=100% on browsers*/
+
+
+    @include respond(big-tab) {  // width < 1300 ?
+		font-size: 54.16%; // 1rem = 9px, 8/16 = 50%
+	}
+
+	@include respond(small-tab) {
+		font-size: 50%; // 1rem = 8px, 8/16 = 50%  // width < 900 ?
+	}
+
+	@include respond(phone) {
+		font-size: 45%;
+    }
 }
 
 body {
