@@ -1,0 +1,152 @@
+.add{
+    &__value{
+        width: 20%; 
+    }
+    &__value,
+    &__type {
+        margin-right: 2rem;
+        padding: .3rem .5rem;
+        background-color: $color-yellow-light;
+        border: 1px solid $color-secondary;
+        color: $color-secondary;
+        outline: none;
+
+        &::placeholder{
+            font-size: 1.2rem;
+            color: $color-secondary;
+        } 
+        
+        &::-ms-expand {
+            color: $color-secondary;
+            border: 1px solid $color-secondary;
+            background-color: $color-yellow-light;
+        }
+    }
+}
+
+.content{
+    &__column{
+        padding: 4rem;
+        width:50%;
+        min-height: 45vh;
+        float: left;      
+        @include respond(big-tab) {
+            padding: 2rem;
+        }  
+        @include respond(small-tab) {
+            padding: 4rem;
+        } 
+    }
+}
+.budget{
+    &__income {
+        width: 100%;
+        padding: 1rem 0;
+        border-top: 1px solid $color-grey-light;
+        border-bottom: 1px solid $color-grey-light;
+
+        @include respond(small-tab) {
+            width: 60%;
+            margin: 0 auto;
+        }
+         
+
+        &--text{
+            float: left;
+        }
+
+        &--value{
+            padding: .3rem 1rem;
+            color: $color-white;
+            background-color: $color-green;
+        }
+    }
+
+    &__expenses{
+        width: 100%;
+        padding: 1rem 0;
+        border-bottom: 1px solid $color-grey-light;
+        @include respond(small-tab) {
+            width: 60%;
+            margin: 0 auto;
+        } 
+
+        &--value{
+            padding: .3rem 1rem;
+            color: $color-white;
+            background-color: $color-red;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &--text{
+            float: left;
+        }
+
+        &--percentage{
+            font-size: 1rem;
+            padding: .3rem;
+            margin:0 .3rem;
+            color: $color-red;
+            border: 1px solid $color-red;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    }
+
+    &__header{
+        text-align: center;
+        padding: 2rem 0;
+        margin-bottom: 3rem;
+        @include respond(small-tab) {
+            margin-bottom: 0;
+        }
+        @include respond(phone) {
+            padding-top: 0;
+        }
+    }
+
+    &__title{
+        margin-bottom: 1rem;
+    }
+
+
+    &__value{
+        display: inline-block;
+        padding: .3rem 1rem;
+        color: $color-white;
+        background-color: rgba($color-secondary,.6);
+    }
+
+}
+
+.item{
+    &__expense, &__income{
+        display: inline-block;  
+        vertical-align: middle;
+    }
+
+    &__green{
+        color: $color-green;                
+    }
+    
+    &__red{
+        color: $color-red;           
+    }
+    &__value {    
+        display: inline-block; 
+        vertical-align: middle;   
+        padding: .5rem;        
+        margin-right: .5rem;
+        padding-left: 1rem;
+        transition: all .3s ease-out;                
+    }
+    &__percentage{
+        display: inline-block;
+        vertical-align: middle;
+        padding: .1rem;
+        margin-right: .5rem;
+        border: 1px solid currentColor;     
+        transition: all .3s ease-out;             
+    }
+}

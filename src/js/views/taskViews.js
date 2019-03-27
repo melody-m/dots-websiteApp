@@ -30,10 +30,7 @@ export const taskUI = {
         let element, html;
 
         html = `<div class="item clearfix" id="prio${prio}-${obj.id}">
-        <label class="item__object">
-            <input type="checkbox" class="item__checkbox">
-            <span class="item__checkmark"></span>
-        </label>
+
         <div class="item__description">${obj.description}</div>
         
         <div class="right clearfix">

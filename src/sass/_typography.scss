@@ -9,7 +9,7 @@ h1{
     font-size: 2rem;
     font-style: italic;
     text-align: center;
-    color: $color-grey-light-2;
+    color: $color-grey-light;
 }
 
 h2{
@@ -80,7 +80,7 @@ label{
     margin-right: 1rem;
 
     &1{color: $color-primary-dark;}
-    &2{color: $color-primary-dark2;}
+    &2{color: $color-primary-medium;}
     &3{color: $color-primary;}
 }
 
@@ -92,6 +92,9 @@ th{
     font-family: 'Merriweather', serif;
     font-size: 1.4rem;
     font-weight: 400;
+}
+td{
+    font-size: 1.6rem;
 }
 
 .tips{

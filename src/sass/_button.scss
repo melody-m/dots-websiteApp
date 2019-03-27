@@ -1,7 +1,21 @@
 .container{
     
-    text-align: center;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;    
+    // padding-top: 8rem;
+
+    @include respond(small-tab){
+        padding-top: 0;
+        position: relative;
+        transform: translate(0);
+        top: 0;
+        left: 0;
+    }
+
     @include respond(phone){
         margin-bottom: 3rem;
     }
@@ -22,6 +36,10 @@
     @include respond(small-tab){
         width: 100%;
         height: 33rem;
+        margin-bottom: 3rem;
+    }
+    @include respond(phone){
+        margin-bottom: 5rem;
     }
 
     &__text {
@@ -29,14 +47,12 @@
     }
 
     &__link{
+        width: 100%;
+        height: 100%;
+        display: inline-block;
         color: $color-white;  
         cursor: pointer;
         z-index: 25;
-    }
-
-    &:hover .appLabel{
-        transform: translateY(-2rem);    
-        opacity: 1;
     }
 }
 
@@ -55,6 +71,7 @@
 
     &__toDo{
         background-image: url(../img/obBg.svg);
+
     }
     &__budget{
         background-image: url(../img/bbBg.svg);
@@ -67,7 +84,7 @@
 
 .appLabel{
     transition: all .3s ease-in-out;
-    opacity: 0;
+    opacity: 1;
 
     &__todo{color: $color-primary;} 
     &__budget{color: $color-secondary;} 
@@ -80,8 +97,8 @@
     &__arm{
 
         position: absolute;
-        top: 49%;
-        left: 32%;
+        top: 50%;
+        left: 34%;
         z-index: 10;
         transform-origin: top left;
         background-image: url(../img/obArm.svg);
@@ -127,48 +144,11 @@
         transition: all 1s;
     }
 
-    &__pupil{
-
-        position: absolute;
-        z-index: 10;
-        background-color:#494949;
-        width: .4rem;
-        height: .5rem;
-        border-radius:50%;
-
-        z-index:11;
-
-        &--L{
-            top: 42%;
-            left: 51%;
-        }
-        &--R{
-            top: 42%;
-            left: 54%;
-        }
-    }
-
-    &__backlist{
-        background-image: url(../img/obBckList.svg);
-        background-size: cover;
-        background-position: center;
-
-        width: 120px;
-        height: 120px;
-
-        position: absolute;
-        top: 50%;
-        left: 46%;
-    }
     &__listExt{
 
         background-image: url(../img/obListExt.svg);
         background-size: cover;
         background-position: center;
-        /* background-color:#ffe2a2; */
-        border-right: 1px solid #a67c52;
-        border-left: 1px solid #a67c52;
-        border-bottom: 1px solid #a67c52;
         width: 5.2rem;
         height: 5rem;
 
@@ -177,6 +157,19 @@
         left: 48%;
         z-index: 2;   
         transition: all 2s;
+        @include respond(big-tab){
+            width: 6.4rem;
+            height: 6rem;
+        }
+        @include respond(small-tab){
+            width: 6.6rem;
+            height: 6.2rem;
+        }
+    
+        @include respond(phone){
+            width: 7.2rem;
+            height: 7rem;
+        }
     }
 
     &__list{
@@ -214,9 +207,9 @@
     }
     &__smile{
         position: absolute;
-        top: 44.5%;
-        left: 51.5%;
-        background-color: $color-grey-dark-2;
+        top: 43%;
+        left: 51%;
+        background-color: $color-grey-dark;
 
         width: .7rem;
         height: 1px;
@@ -277,8 +270,8 @@
 .tips{
     &__hand{
         position: absolute;
-        top: 52%;
-        left: 50%;
+        top: 43.5%;
+        left: 46%;
     
         background-image: url(../img/ybhand.svg);
         background-size: cover;
@@ -332,28 +325,28 @@
             background-size: cover;
             background-position: top;
             top: 46%;
-            left: 30%; 
+            left: 25%; 
         }
         &--2{
             background-image: url(../img/ybminus.svg);
             background-size: cover;
             background-position: top;
             top: 36%;
-            left: 34%; 
+            left: 30%; 
         }
         &--3{
             background-image: url(../img/ybtwo.svg);
             background-size: cover;
             background-position: top;
             top: 50%;
-            left: 32%; 
+            left: 29%; 
         }
         &--4{
             background-image: url(../img/ybmult.svg);
             background-size: cover;
             background-position: top;
             top: 40%;
-            left: 36%; 
+            left: 33%; 
         }
     }
 }
@@ -363,7 +356,6 @@
 .hoverBox{
     width: 30rem;
     height: 30rem;
-
     position: absolute;    
     top: 50%;
     left: 50%;
@@ -473,82 +465,7 @@
         transform: translate(-1rem, -3rem);}
 }
 
-@keyframes bounceInDown {
-    from,
-    60%,
-    75%,
-    90%,
-    to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -300rem, 0) scaleY(.9);
-      transform: translate3d(0, -300rem, 0) scaleY(.9);
-    }
-  
-    50% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 2.5rem, 0) scaleY(1);
-      transform: translate3d(0, 2.5rem, 0) scaleY(1);
-    }
-  
-    70% {
-      -webkit-transform: translate3d(0, -1rem, 0) scaleY(1);
-      transform: translate3d(0, -1rem, 0) scaleY(1.1);
-    }
-  
-    90% {
-      -webkit-transform: translate3d(0, 5px, 0) scaleY(.95);
-      transform: translate3d(0, 5px, 0) scaleY(.9);
-    }
-  
-    to {     
-        opacity: 1;  
-      -webkit-transform: translate3d(0, 0, 0) scaleY(1);
-      transform: translate3d(0, 0, 0) scaleY(1);
-    }
-  }
 
-  @-webkit-keyframes bounceInLeft {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-3000px, 0, 0);
-    transform: translate3d(-3000px, 0, 0);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: translate3d(25px, 0, 0);
-    transform: translate3d(25px, 0, 0);
-  }
-
-  75% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
-  }
-
-  90% {
-    -webkit-transform: translate3d(5px, 0, 0);
-    transform: translate3d(5px, 0, 0);
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
 
 
 @keyframes bounceInLeft {

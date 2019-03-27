@@ -1,0 +1,45 @@
+.loader{
+    height: 100vh; 
+    
+    &__container{
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2500;
+    }
+}
+
+#overlay {
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: $color-grey-dark;
+}
+
+
+.spinner {    
+    
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    border-radius: 50%;    
+    margin: 1rem;
+    z-index: 110;
+    background-color: $color-white;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% { -webkit-transform: perspective(12rem) }
+    50% { -webkit-transform: perspective(12rem) rotateY(180deg) }
+    100% { -webkit-transform: perspective(12rem) rotateY(359deg)}
+}
+

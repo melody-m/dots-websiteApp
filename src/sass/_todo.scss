@@ -1,0 +1,44 @@
+.add {
+    &__input{
+        &--label{
+            margin-right: 2rem;
+        }
+        &--prio{
+            padding: .3rem;
+            margin-right: 2rem;
+            color: $color-primary;
+            background-color: $color-yellow-light;
+            border: 1px solid $color-primary;
+            outline: none;
+
+            &::-ms-expand {
+                color: $color-primary;
+                border: 1px solid $color-primary;   
+                background-color: $color-yellow-light;
+            }
+        }
+    }
+}
+
+.content{
+    &__title{
+        display: inline-block;
+    }
+}
+
+.item{
+    &__priority {
+        display: inline-block;  
+        vertical-align: middle;
+        padding: .5rem;        
+        margin-right: 1rem;
+        padding-left: 1rem;
+        transition: transform 0.3s;
+        border-left: 1px solid white;
+        color: white;
+
+        &--1{color: $color-primary-dark;}
+        &--2{color: $color-primary-medium;}
+        &--3{color: $color-primary;}
+    }
+}

@@ -53,6 +53,16 @@ const popups = [popupTask, popupBudget, popupTips];
 
 function init(){
 
+    window.addEventListener("load", () => {
+
+        const loaders = document.querySelectorAll('.load');
+        const loadersArr = Array.from(loaders);
+
+        loadersArr.forEach((cur)=>{
+            cur.style.display = "none";
+        })
+    });
+
     window.onload = () => {
         const circles = document.querySelectorAll('.circle');
         
@@ -71,9 +81,13 @@ function init(){
 
         cur.circleBtn.addEventListener('click', () => {        
             cur.popupExpand(cur.container);
+            document.querySelector('body').classList.add('noscroll');
+            document.querySelector('.popup__bckgrd').classList.remove('collapse');  
         })
         cur.closeBtn.addEventListener('click', () => {
             cur.popupClose(cur.container);
+            document.querySelector('body').classList.remove('noscroll');
+            document.querySelector('.popup__bckgrd').classList.add('collapse');  
         })
     })
 
@@ -101,27 +115,20 @@ function budgetEventListener(){
 
 function ctrlAddItem(){
     let newItem;        
-    
-    //1. Get input from UI
+
     const input = budgetUI.getInput();
 
-    // Check if it's not empty
+
     if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
-         //2. Add the item to the budget controller
         newItem = budgetCtrl.addItem(input.type, input.description, input.value);
-        //console.log(newItem);
     }
 
-    // 3. Add the item to the UI
     budgetUI.addListItem(newItem, input.type);
 
-    // // 4. Clear the fields
     budgetUI.clearFields();
 
-    // 5. Calculate and update budget
     updateBudget();
             
-    // 6. Calculate and update percentages
     updatePercentages();
 
 }
@@ -129,26 +136,22 @@ function ctrlAddItem(){
 
 
 function updateBudget(){
-    // 1. Calculate the budget
+
     budgetCtrl.calculateBudget();
 
-    // 2. Return the budget
     const budget = budgetCtrl.getBudget();
     
-    // 3. Display the budget on the UI
     budgetUI.displayBudget(budget);
 
 }
 
 
 function updatePercentages() {
-    // 1. Calculate percentages
+
     budgetCtrl.calculatePercentages();
     
-    // 2. Read percentages from the budget controller
     const percentages = budgetCtrl.getPercentages();
     
-    // 3. Update the UI with the new percentages
     budgetUI.displayPercentages(percentages);
 }
 
@@ -165,16 +168,12 @@ function ctrlDeleteItem(e) {
         const type = splitID[0];
         const ID = parseInt(splitID[1]);
         
-        // 1. delete the item from the data structure
         budgetCtrl.deleteItem(type, ID);
         
-        //2. Delete the item from the UI
         budgetUI.deleteListItem(itemID);
         
-        //3. Update and show the new budget
         updateBudget();
-        
-        //4. Calculate and update percentages
+
         updatePercentages();
     }
 };

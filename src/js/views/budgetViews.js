@@ -114,18 +114,21 @@ export const budgetUI = {
     
     displayBudget: (obj) => {
         let type;
+        console.log(obj);
+        console.log(document.querySelector(DOMstrings.percentageLabel));
+        if (obj.percentage > 0) {
+            document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage + '%';
+        } else {
+            document.querySelector(DOMstrings.percentageLabel).textContent = '---';
+        }
+        
         obj.budget > 0 ? type = 'inc' : type = 'exp';
        
         document.querySelector(DOMstrings.budgetLabel).textContent = formatNumber(obj.budget, type);
         document.querySelector(DOMstrings.incomeLabel).textContent = formatNumber(obj.totalInc, 'inc');
         document.querySelector(DOMstrings.expensesLabel).textContent = formatNumber(obj.totalExp, 'exp');
-
         
-        // if (obj.percentage > 0) {
-        //     document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage + '%';
-        // } else {
-        //     document.querySelector(DOMstrings.percentageLabel).textContent = '---';
-        // }
+
         
     },
 

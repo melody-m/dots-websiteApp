@@ -13,6 +13,13 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
 //MIXINS MEDIA QUERIES
 
 @mixin  respond($breakpoint) {

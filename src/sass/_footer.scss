@@ -1,0 +1,14 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: $color-grey-light;
+    background-color: rgba($color-black, .2);
+
+    @include respond(phone){
+        position: relative;
+    }
+}
