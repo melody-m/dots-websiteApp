@@ -17,15 +17,6 @@
     
 }
 
-.content{
-    &__total--C{
-        & li{
-            @include respond(big-tab){
-                font-size: 1.3rem;
-            }
-        }
-    }
-}
 
 table {
     border-collapse: collapse;

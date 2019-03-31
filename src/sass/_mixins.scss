@@ -24,23 +24,26 @@
 
 @mixin  respond($breakpoint) {
     @if $breakpoint == phone {
-        @media (max-width: 37.5em) {@content};   //600px
+        @media only screen and (max-width: 37.5em) {@content};   //600px
     }
 
     @if $breakpoint == small-tab {
-        @media (max-width: 56.25em) {@content};  //900px 
+        @media only screen and (max-width: 56.25em) {@content};  //900px 
     } 
     
     @if $breakpoint == big-tab {
-        @media (max-width: 81.25em) {@content};  //1300px
+        @media only screen and (max-width: 81.25em) {@content};  //1300px
+    }
+    @if $breakpoint == laptop {
+        @media only screen and (max-width: 86.25em) {@content};  //1380px
     }
     @if $breakpoint == desktop {
-        @media (max-width: 93.75em) {@content};  //1500px
+        @media only screen and (max-width: 93.75em) {@content};  //1500px
     }
 
     //No Hover touchscreen
     @if $breakpoint == mobile {
-        @media (hover: none) {@content};
+        @media only screen and (hover: none) {@content};
     }
     
 }
