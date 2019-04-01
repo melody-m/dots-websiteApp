@@ -2,22 +2,22 @@ class Budget {
     constructor(id, description, value, type) {
         this.id = id;
         this.description = description;
-        this.value = value;
-        this.type = type;
+        this.value = value;      
+        this.type = type;  
     }
 
     calcPercentage(totalIncome) {
-        this.percentage = -1;
         if (totalIncome > 0) {
             this.percentage = Math.round((this.value / totalIncome) * 100);
+        } else {
+            this.percentage = -1;
         }
-    }
-
+    }    
+    
     getPercentage(){
         return this.percentage;
     }
-}
-
+} 
 
 const data = {
     allItems: {
@@ -32,7 +32,6 @@ const data = {
     percentage: -1
 };
 
-
 const calculateTotal = (type) => {
     let sum = 0;
     data.allItems[type].forEach((cur) => {
@@ -42,45 +41,52 @@ const calculateTotal = (type) => {
 };
 
 
+
+
 export const budgetCtrl = {
 
-    addItem : (type, des, val) => {
-        let ID = 0;
 
+    addItem : (type, des, val) => {
+        let ID;
+    
         // Create new ID
         if (data.allItems[type].length > 0) {
             ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
+        } else {
+            ID = 0;
         }
-
-        // Create new Budget item
-
-        const newItem = new Budget(ID, des, val, type);
-
-        // Create new item
+    
+        //Create new Budget item
+    
+        const newItem = new Budget(ID, des, val, type)
+    
+        //Create new item
         if (type === 'exp') {
             data.allItems[type].push(newItem);
         } else if (type === 'inc') {
             data.allItems[type].push(newItem);
         }
-
+       
         // Return the new element
         return newItem;
-    },
+    
+        },
 
     calculateBudget: () => {
-
-        // Calculate total income and expenses
+        
+        // calculate total income and expenses
         calculateTotal('exp');
         calculateTotal('inc');
-
+        
         // Calculate the budget: income - expenses
         data.budget = data.totals.inc - data.totals.exp;
-
+        
         // calculate the percentage of income that we spent
-        data.percentage = -1;
         if (data.totals.inc > 0) {
             data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
-        }
+        } else {
+            data.percentage = -1;
+        }            
     },
 
     getBudget: () => {
@@ -91,35 +97,42 @@ export const budgetCtrl = {
             percentage: data.percentage
         };
     },
-
+    
     calculatePercentages: () => {
         data.allItems.exp.forEach((cur) => {
            cur.calcPercentage(data.totals.inc);
         });
     },
-
+    
+    
     getPercentages: () => {
-        return data.allItems.exp.map((cur) => {
+        const allPerc = data.allItems.exp.map((cur) => {
             return cur.getPercentage();
         });
+        //console.log(allPerc);
+        return allPerc;
     },
 
     deleteItem: (type, id) => {
-
-        // Loop over array of inc/exp - create new array with only the ids. because...?
+        
+        //loop over array of inc/exp - create new array with only the ids
         const ids = data.allItems[type].map((current) => {
             return current.id;
         });
 
-        // Retrieve index in the array of the id passed on
+        //retrieve index in the array of the id passed on 
         const index = ids.indexOf(id);
 
-        // Remove item according to index
+        //remove item according to index
         if (index !== -1) {
             data.allItems[type].splice(index, 1);
         }
+        console.log(data.allItems);        
     }
-};
+
+
+    
+}
 
 
 

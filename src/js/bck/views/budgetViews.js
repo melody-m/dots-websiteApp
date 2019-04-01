@@ -15,8 +15,9 @@ export const DOMstrings = {
 };
 
 
+
 const formatNumber = function(num, type) {
-    let numSplit, int, dec;
+    var numSplit, int, dec, type;   
 
     num = Math.abs(num);
     num = num.toFixed(2);
@@ -34,6 +35,7 @@ const formatNumber = function(num, type) {
 };
 
 
+
 export const budgetUI = {
 
     getInput : () => {
@@ -45,7 +47,7 @@ export const budgetUI = {
     },
 
     addListItem : (obj, type) => {
-            let html, element;
+            let html, newHtml, element;
             // Create HTML string with placeholder text
             
             if (type === 'inc') {
@@ -75,60 +77,80 @@ export const budgetUI = {
                 </div>`;
             }            
             // Insert the HTML into the DOM
-            document.querySelector(element).insertAdjacentHTML('beforeend', html);
+            document.querySelector(element).insertAdjacentHTML('beforeend', html);        
     },
 
     clearFields:() => {
+              
         const fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+        
         const fieldsArr = Array.prototype.slice.call(fields);
-
+        
         fieldsArr.forEach((current, index, array) => {
             current.value = "";
         });
-
+        
         fieldsArr[0].focus();
     },
 
     displayPercentages: (percentages) => {
-        const fields = document.querySelectorAll(DOMstrings.expensesPercLabel);
-        const fieldsArr = Array.from(fields);
 
+        //percentages > [,]
+            
+        const fields = document.querySelectorAll(DOMstrings.expensesPercLabel);
+
+        const fieldsArr = Array.from(fields);
+        
         fieldsArr.forEach((cur, index) => {
-            cur.textContent = '---';
             if (percentages[index] > 0) {
                 cur.textContent = percentages[index] + '%';
+            } else {
+                cur.textContent = '---';
             }
-        });
-    },
 
+        });
+       
+    },
+    
     displayBudget: (obj) => {
         let type;
-        document.querySelector(DOMstrings.percentageLabel).textContent = '---';
+        console.log(obj);
+        console.log(document.querySelector(DOMstrings.percentageLabel));
         if (obj.percentage > 0) {
             document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage + '%';
+        } else {
+            document.querySelector(DOMstrings.percentageLabel).textContent = '---';
         }
-
+        
         obj.budget > 0 ? type = 'inc' : type = 'exp';
-
+       
         document.querySelector(DOMstrings.budgetLabel).textContent = formatNumber(obj.budget, type);
         document.querySelector(DOMstrings.incomeLabel).textContent = formatNumber(obj.totalInc, 'inc');
         document.querySelector(DOMstrings.expensesLabel).textContent = formatNumber(obj.totalExp, 'exp');
+        
 
+        
     },
 
     displayMonth: () => {
+              
         const now = new Date();
+        //var christmas = new Date(2016, 11, 25);
+        
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         const month = now.getMonth();
+        
         const year = now.getFullYear();
         document.querySelector(DOMstrings.dateLabel).textContent = `${months[month]} ${year}`;
     },
 
     deleteListItem: (selectorID) => {
+            
         const el = document.getElementById(selectorID);
-        el.parentNode.removeChild(el);
+        el.parentNode.removeChild(el);        
     },
-};
+    
+}
 
 
 

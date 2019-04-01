@@ -16,11 +16,13 @@ export const taskDOM = {
 
 export const taskUI = {
     getInput : () => {
+       
         return {
-            description : document.querySelector(taskDOM.inputDescription).value,
-            priority: parseInt(document.querySelector(taskDOM.inputPrio).value),
-            // value of the "value" in html NOT what's selected by user
-            type : 'prio'+ document.querySelector(taskDOM.inputPrio).value
+
+        description : document.querySelector(taskDOM.inputDescription).value,
+        priority: parseInt(document.querySelector(taskDOM.inputPrio).value),
+        type : 'prio'+ document.querySelector(taskDOM.inputPrio).value // value of the "value" in html NOT what's selected by user
+
         };
     },
 
@@ -36,43 +38,51 @@ export const taskUI = {
             <div class="item__delete">
                 <button class="item__delete--btn item__priority--${prio}">&times;</button>
             </div>
-        </div>`;
+        </div>`;      
 
-        if (prio === 1 ) {
-            element = taskDOM.prio1;
-        } else if (prio === 2 ) {
-            element = taskDOM.prio2;
-        } else {
-            element = taskDOM.prio3;
-        }
+        if (prio === 1 ){
+            element = taskDOM.prio1;              
+        } else if (prio === 2 ){            
+            element = taskDOM.prio2;             
+        } else {            
+            element = taskDOM.prio3;            
+        };                 
 
+        
         document.querySelector(element).insertAdjacentHTML('beforeend', html);
     },
 
     addTotalTask : (value, prio) => {
+        
         if (prio === 1 ){
             document.querySelector(taskDOM.totalValue1).textContent = value;
+            
         } else if (prio === 2 ){ 
             document.querySelector(taskDOM.totalValue2).textContent = value;
+            
         } else {
-            document.querySelector(taskDOM.totalValue3).textContent = value;
-        }
+            document.querySelector(taskDOM.totalValue3).textContent = value;            
+        };        
+
     },
 
     deleteListTask : (selectorID) => {
-        const el = document.getElementById(selectorID); // Will give full id of element ex: prio1-0
+
+        const el = document.getElementById(selectorID); // will give full id of element ex: prio1-0
         el.classList.add('fadeOut');
 
         setTimeout(() => {
             el.parentNode.removeChild(el);
-        },500);  // Fade out takes .4s
+        },500);  // fade out takes .4s
     },
 
     clearfields : () => {
+
         const field = document.querySelector(taskDOM.inputDescription);
         const prio = document.querySelector(taskDOM.inputPrio);
 
         field.value = "";
         prio.value = 1;
     }
-};
+
+}

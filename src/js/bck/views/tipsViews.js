@@ -9,20 +9,22 @@ export const tipsDOM = {
     inputPeople : document.querySelector('.tips__people'),
     displayShare : document.getElementById('share-display'),
     clear : document.querySelector('.tips__clear')
-};
+}
 
 
 export const tipsUI = {
 
     getInput : () => {
+       
         return {
-            bill : parseFloat(tipsDOM.inputBill.value),
-            tipValue: parseFloat(tipsDOM.inputTip.value)
+        bill : parseFloat(tipsDOM.inputBill.value),
+        tipValue: parseFloat(tipsDOM.inputTip.value)
         };
     },
 
     displayResults : (bill, tip, totalBill)  => {
-        const billHtml = `£${bill.toFixed(2)}`;
+        
+        const billHtml = `£${bill.toFixed(2)}`
         const tipHtml = `£${tip.toFixed(2)}`;
         const totalHtml = `£${totalBill.toFixed(2)}`;
 
@@ -32,6 +34,7 @@ export const tipsUI = {
     },
 
     clearfields : () => {
+
         const field = tipsDOM.inputBill;
         const tipSelect = tipsDOM.inputTip;
         const fieldPeople = tipsDOM.inputPeople;
@@ -49,13 +52,16 @@ export const tipsUI = {
     },
 
     getPeople : () => {
+       
         return {
-            people : parseInt(tipsDOM.inputPeople.value)
+        people : parseInt(tipsDOM.inputPeople.value)       
         };
     },
 
     displayShare : (share) => {
         const shareHtml = `£${share.toFixed(2)}`;
+
         tipsDOM.displayShare.insertAdjacentHTML('afterbegin',shareHtml);
+
     }
-};
+}

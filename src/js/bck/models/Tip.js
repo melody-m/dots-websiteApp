@@ -5,7 +5,9 @@ let data = [];
 export const tipCtrl = {
 
     calcTip(bill, tipValue){
-        return (bill * tipValue) / 100;
+
+        const tip = (bill*tipValue)/100;
+        return tip;
     },
 
     calcTotal(bill, tip){
@@ -15,10 +17,12 @@ export const tipCtrl = {
     },
 
     calcShare(people){
-        return data[0] / people;
+        const share = data[0]/people;
+        return share;
     },
 
     clearData(){
         data = [];
+        console.log(data);
     }
-};
+}
