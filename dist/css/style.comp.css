@@ -85,6 +85,17 @@ label {
   .content__total--C li {
     font-size: 1.3rem; } }
 
+.content__sum {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  text-align: left; }
+  @media only screen and (max-width: 81.25em) {
+    .content__sum {
+      font-size: 1.3rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .content__sum {
+      text-align: center; } }
+
 .item {
   font-size: 1.4rem; }
   .item__object {
@@ -1009,26 +1020,15 @@ td {
   .content__total--C {
     background-color: rgba(255, 242, 131, 0.3);
     min-height: 55vh; }
-    @media only screen and (max-width: 86.25em) {
+    @media only screen and (max-width: 86.25em) and (max-height: 50em) {
       .content__total--C {
-        min-height: 62vh; } }
+        min-height: 71vh; } }
     @media only screen and (max-width: 81.25em) {
       .content__total--C {
         min-height: 55vh; } }
     @media only screen and (max-width: 56.25em) {
       .content__total--C {
         min-height: auto; } }
-
-.content__sum {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  text-align: left; }
-  @media only screen and (max-width: 81.25em) {
-    .content__sum {
-      font-size: 1.3rem; } }
-  @media only screen and (max-width: 56.25em) {
-    .content__sum {
-      text-align: center; } }
 
 .content__list {
   padding: 4rem; }

@@ -58,7 +58,22 @@ label{
             }
         }
     }
+
+    &__sum{
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        text-align: left;
+        @include respond(big-tab){
+            font-size: 1.3rem;
+        }
+        
+        @include respond(small-tab) {
+            text-align: center;
+        }
+    }
 }
+
+
 
 .item{
     font-size: 1.4rem;

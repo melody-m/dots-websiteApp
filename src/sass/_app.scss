@@ -201,7 +201,7 @@
             min-height: 55vh;
 
             @include respond(laptop){
-                min-height: 62vh;
+                min-height: 71vh;
             }
             @include respond(big-tab){
                 min-height: 55vh;
@@ -211,18 +211,6 @@
             }
         }
         
-    }
-    &__sum{
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        text-align: left;
-        @include respond(big-tab){
-            font-size: 1.3rem;
-        }
-        
-        @include respond(small-tab) {
-            text-align: center;
-        }
     }
 
     &__list{
