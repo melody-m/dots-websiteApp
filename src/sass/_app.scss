@@ -78,6 +78,9 @@
     &__tasks, .popup__budget, .popup__tips{
         position: relative;
     }
+    &__tips{
+        background-color: rgba($color-tertiary-light,.3);
+    }
     
     &__close {
         z-index: 50;
@@ -197,15 +200,8 @@
             background-color: rgba($color-secondary,.15);
         }
         &--C{
-            background-color: rgba($color-tertiary-light,.3);
-            min-height: 55vh;
+            min-height: 20vh;
 
-            @include respond(laptop){
-                min-height: 71vh;
-            }
-            @include respond(big-tab){
-                min-height: 55vh;
-            }
             @include respond(small-tab) {
                 min-height: auto;
             }
@@ -214,6 +210,7 @@
     }
 
     &__list{
+        background-color: $color-yellow-light;
         padding: 4rem;
         @include respond(small-tab) {
             min-height: 50vh;
